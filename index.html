@@ -6,8 +6,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>derekMartin.</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="Derek's personal space on the interwebs." content="">
+  <meta name="Derek Martin" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -56,9 +57,9 @@
       </svg>
     </div>
       <div class="center">
-        <h5 id="link" style="font-family: 'Shadows Into Light', cursive; text-align: center; line-height: 1.5" >Coming Soon...</h5>
+        <h5 id="elm1" style="font-family: 'Shadows Into Light', cursive; line-height: 1.5" >Coming Soon...</h5>
         <p>derek.n.martin@gmail.com</p>
-        <p id="link"><a style="color=white" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
+        <p><a id="elm2" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
       </div>
     </div>
   </div>
@@ -71,20 +72,20 @@
 
   <script type="text/javascript">
 
-  document.getElementById("link").addEventListener("mouseover", mouseOver);
-  document.getElementById("link").addEventListener("mouseout", mouseOut);
-
   var colours = [
       "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f1c40f", "#e67e22", "#e74c3c"
-  ];
+  ]; 
 
-  function mouseOver() {
-      document.getElementById("link").style.color = colours[ Math.floor((Math.random() * 6) + 1)];
-  }
-
-  function mouseOut() {
-      document.getElementById("link").style.color = "white";
-  }
+$("#elm1").hover(function(){
+    $("#elm1").css("color", colours[ Math.floor((Math.random() * (colours.length)-1) + 1)]);
+    }, function(){
+    $("#elm1").css("color", "white");
+  });
+$("#elm2").hover(function(){
+    $("#elm2").css("color", colours[ Math.floor((Math.random() * (colours.length)-1) + 1)]);
+    }, function(){
+    $("#elm2").css("color", "white");
+  });
 
   </script>
 

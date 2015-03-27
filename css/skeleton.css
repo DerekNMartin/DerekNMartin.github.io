@@ -214,9 +214,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #c0392b; }
+  color: inherit; text-decoration: none;}
 a:hover {
-  color: #e74c3c; }
+  color: inherit; }
 
 
 /* Buttons
