@@ -29,17 +29,19 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .sidebar{
-  position: relative;
-  background-color: #ff6259;
-  padding: 20px 20px;
+  #sideDiv{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
   }
-
-  .center{
-  text-align: center;
-  width: 50% ;
-  margin-left: auto ;
-  margin-right: auto ;
+  #sidebar{
+    padding: 20px;
+    background:#ff6259;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
   }
 
 .container {
@@ -151,7 +153,7 @@ body {
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-h6 { 
+h1.name { 
   font-family: 'Open Sans', sans-serif;
   font-size: 10.0rem; 
   color: #444349;  
@@ -161,7 +163,7 @@ h6 {
   line-height: 0.8;
   }
 
-  h5 {
+  h2.sidebarTitle {
     color: white;
     font-size: 7.0rem;   
     font-weight: 900;
@@ -170,7 +172,7 @@ h6 {
     line-height: 1;
   }
 
-h1, h2, h3, h4, {
+h1, h2, h3, h4, h5, h6{
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300; }
@@ -178,33 +180,43 @@ h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem; }
 h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
 h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.0rem; line-height: 1.5; letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6; letter-spacing: 0rem; }
 
-/* Larger than phablet */
-@media (min-width: 550px) {
+/* MOBILE */
+@media (min-width: 300px) {
+  h1.name { font-size: 7.5rem; }
+  h2.sidebarTitle { font-size: 5.5rem; }
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
-  h5 { font-size: 6.0rem; }
-  h6 { font-size: 5.5rem; } 
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 2.0rem; } 
 }
 
-/* Larger than desktop */
+/* TABLET */
 @media (min-width: 1000px) {
-  h6 { font-size: 7.0rem; }
-  h5 { font-size: 5.0rem; }
+  h1.name { font-size: 5.0rem; }
+  h2.sidebarTitle { font-size: 3.5rem; }
 }
 
-/* Larger than Desktop HD */
+/* LAPTOP */
 @media (min-width: 1200px) {
-  h6 { font-size: 9.0rem; }
-  h5 { font-size: 6.0rem; }
+  h1.name { font-size: 6.0rem; }
+  h2.sidebarTitle { font-size: 4.5rem; }
 }
 
-/* Larger than Desktop HD */
+/* DESKTOP */
+@media (min-width: 1400px) {
+  h1.name { font-size: 7.5rem; }
+  h2.sidebarTitle { font-size: 5.5rem; }
+}
+
+/* DESKTOP HD */
 @media (min-width: 1900px) {
-  h6 { font-size: 10.0rem; }
-  h5 { font-size: 7.0rem; }
+  h1.name { font-size: 9.0rem; }
+  h2.sidebarTitle { font-size: 7.0rem; }
 }
   
 p {
@@ -213,10 +225,13 @@ p {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: inherit; text-decoration: none;}
-a:hover {
-  color: inherit; }
+a{
+  color: white;
+  font-size: 110%;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 
 /* Buttons
@@ -434,7 +449,7 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
-.centerImg {
+#center {
   display: block;
   margin-left: auto;
   margin-right: auto
@@ -591,17 +606,17 @@ there.
 */
 
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
+/*  MOBILE */
+@media (min-width: 300px) {}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
+/* TABLET */
 @media (min-width: 1200px) {}
+
+/* LAPTOP */
+@media (min-width: 1200px) {}
+
+/* DESKTOP */
+@media (min-width: 1400px) {}
+
+/* DESKTOP HD */
+@media (min-width: 1600px) {}
