@@ -45,7 +45,7 @@
   }
 
 .container {
-  color: white;
+  color: black;
   position: relative;
   width: 100%;
   max-width: 960px;
@@ -146,7 +146,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
 
@@ -167,8 +167,8 @@ h1.name {
     color: white;
     font-size: 7.0rem;   
     font-weight: 900;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     line-height: 1;
   }
 
@@ -212,15 +212,15 @@ h6 { font-size: 1.5rem; line-height: 1.6; letter-spacing: 0rem; }
   h1.name { font-size: 7.5rem; }
   h2.sidebarTitle { font-size: 5.5rem; }
 }
-
-/* DESKTOP HD */
-@media (min-width: 1900px) {
-  h1.name { font-size: 9.0rem; }
-  h2.sidebarTitle { font-size: 7.0rem; }
-}
   
 p {
-  margin-top: 0; }
+  font-family: 'Merriweather',Georgia,"Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: .01rem;
+  margin-top: 0; 
+  color: white;
+}
 
 
 /* Links
@@ -232,6 +232,23 @@ a{
   text-transform: uppercase;
   text-decoration: none;
 }
+a.sidebar{
+  color: white;
+}
+a.sidebar:hover{
+  background-color: white;
+  color: black;
+  display: block;
+  width: 100%;
+  -webkit-animation-name: sideBG; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+}
+
+@-webkit-keyframes sideBG {
+    0%   {background-color: inherit; color: inherit;}
+    100%  {background-color: white;}
+}
+
 
 
 /* Buttons
