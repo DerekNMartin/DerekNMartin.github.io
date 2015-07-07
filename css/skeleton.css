@@ -172,7 +172,9 @@ p.date{
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #212121; }
+  color: #212121; 
+  text-decoration: none;
+  }
 
 
 /* Buttons
@@ -399,6 +401,13 @@ div.scroll {
     overflow-y: scroll;
   }
 
+div.center {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto
+}
+
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -436,3 +445,19 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+#about { 
+ display: block;
+ position: absolute;
+ top: 0;
+ height: 100%;
+}
+
+#mainpage {
+ height: auto;
+ display: block;
+ overflow: hidden;
+ position: relative;
+ z-index: 2;
+}
