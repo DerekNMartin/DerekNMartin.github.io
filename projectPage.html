@@ -16,7 +16,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -67,13 +67,15 @@
   <hr>
   <div class="m-content scene_element scene_element--fadein">
     <div class="row">
-        <h1 style="text-align: center; padding-bottom: 30px" > This is a Title </h1>
+        <h1 style="text-align: center" > META </h1>
+        <h2 class="subTitle"> There's a reason for that...</h2>
         <div class="nine columns center">
-          <p style="text-align: justify">
-            Nam ne erat illum mediocritatem? Et eros saperet cum, in duo error apeirian! No ipsum repudiandae mea! Per dolores percipit postulant ei, nec eros postulant ad. Nam cu justo putant sadipscing, usu at nostro offendit! Sonet repudiare vis ea, veritus tractatos no mei? Id ius legere percipit postulant, apeirian dignissim inciderint ad cum.
+          <p>
+            Countless design iterations later, stripped down to the bare essentials, I've finally landed on a design that represents me. Clean and minimal, with no fancy distractions. With each iteration, I question every element, asking myself if it's really necessary. Here's a glimpse into the process of creating my website... 
           </p>
-          <p style="text-align: justify">
-            Audire explicari disputationi mel at, ea mei falli aeterno, te eum nihil cetero accusam. Putant platonem vituperata ei vel, no usu vocent adipisci indoctum. Ne nulla pericula pro, dicat tritani noluisse mea ad. Facer iudicabit vim in, cu timeam mediocrem sed, vis ea alia meliore accusamus.
+          <h2 class="subTitle">Research and Inspiration</h2>
+          <p>
+            <a class="random-color" href="www.medium.com">Medium</a> is an amazing, and inpiration site not only for the articles, but the design methodology behind their website. It's one of my most frequently visted sites because of their content as well as the simplicity. 
           </p>
           <p style="text-align: justify">
             Postea vocibus blandit an vis. Sed et ornatus patrioque, minimum copiosae menandri et quo. Quo ea soluta accusam urbanitas. Ex amet iisque duo, pro at duis abhorreant, sed minim scripserit ex?
@@ -88,3 +90,31 @@
       </div>
     </div>
   </div>
+
+  <!-- Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+    /* Random Link Color-------------------- */
+    var randomLinks = $('a.random-color');
+    var original = randomLinks.css('color');
+    var colors = ["#16a085","#27ae60","#2980b9","#8e44ad","#f39c12","#d35400","#c0392b",]
+    randomLinks.hover(function() { //mouseover
+      var num = (Math.floor(Math.random() * colors.length))
+      var col = colors[num];
+      $(this).animate({
+        'color': col,
+      },100);
+    },function() { //mouseout
+      $(this).animate({
+        'color': original,
+      },500);
+    });
+  });
+
+  </script>
+
+  </body>
+</html>

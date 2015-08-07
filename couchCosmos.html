@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>DerekMartin.</title>
+  <meta name="Derek's personal space on the interwebs." content="">
+  <meta name="Derek Martin" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Libraries 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./script/jqueryColor.js"></script>  
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container" style="margin-top: 2%">
+  
+  <div class="row">
+      <div class="center" style="text-align: center">
+        <a href="index.html" class="noBorder">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="10%" viewBox="0 0 285.333 346.667" enable-background="new 0 0 285.333 346.667"
+           xml:space="preserve">
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" points="264,294 264,49 142.274,171.561 
+          21.072,49 21.667,294.12 106.538,204.555 ">
+
+           <animate attributeName="stroke" 
+                        attributeType="XML"
+                        from="#ecf0f1"
+                        to="#2ecc71"
+                        dur="20s"
+                        values="#ecf0f1; #2ecc71; #e74c3c; #9b59b6; #f1c40f; #3498db; #ecf0f1"
+                        keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 1"
+                        repeatCount="indefinite"/>
+        </polyline>
+        </svg>
+        </a>
+    </div>
+  </div>
+  
+  <hr>
+  <div class="m-content scene_element scene_element--fadein">
+    <div class="row">
+        <h1 style="text-align: center" > Couch Cosmos </h1>
+        <h2 class="subTitle" style="text-align: center; border: none; font-size: 20px;"> A interactive installation I crafted to bring the awe-inspiring night sky to our living rooms.</h2>
+        <div class="nine columns center">
+          <ul>
+            <li>Form: Video Installation</li>
+            <li>Tools Used: Processing, Photoshop</li>
+            <li>Description: </li>
+          </ul>
+          <p>
+            Bring the awe-inspiring night sky to your living room! Let’s face it we’re never going to abolish light pollution and you’re too busy to drive out x kilometers to gaze at the millions of beautiful sparkling stars to gain a greater perspective on your place on earth. Why not be in the comfort of your own home relaxing on your couch, staring at the virtual stars on your 65” 4K Ultra HD 120Hz 3D LED Smart television screen while listening to the tranquil hum of night life on your 5.1 surround sound system instead? Rather than contemplating and blowing your mind over what the billions of stars in our galaxy look like and how there are billions of galaxies in our local super cluster; we’ve generated ours from the mere thousands of cars crossing through various intersections in Toronto! Wow who knew traffic was so pretty!
+          </p>
+
+          <hr>
+
+          <h2 style="text-align: center">The Journey</h2>
+
+          <h2 class="subTitle" style="margin-top: 40px">Main Objective</h2>
+          <ol>
+            <li><span>How can I make someone’s day more enjoyable?</span></li>
+            <li><span>How can I get people interested in science/technology through my work?</span></li>
+            <li><span>How can I get people to think critically and rationally about a topic?</span></li>
+          </ol>
+
+
+          <h2 class="subTitle">/ Week 1 Progress / - You’re moving at 1600km/h as you read this.</h2>
+
+          <p>
+            For this week, after hearing the much needed explanation of time running outI decided to get working on my project as soon as I could. My major priority at the moment is finding a sufficiently realistic star field that I can project using processing or MAX/MSP.  
+          </p>
+          <p>
+            After scouring forums and learning some basic processing knowledge (which was not as difficult as I thought it was since it’s based on Java) I found a very small open source program that would help me achieve the star field effect I was going for. This code had the star field moving along the z axis, as if you were in a spaceship traveling through it. Instead I wanted the effect of looking up at these stars from earth, with a slight rotation to represent the earth rotating. Obviously to the naked we could never see the earth rotate just by looking up, but I really like the sense of perspective when viewing a star scape time lapse. It provides an alternative view of what is actually happening as we go on with our days. (Most people don’t put any thought to the fact that, relative to the Earth, we’re turning at ~1500 km/h at the equator. Relative to the Sun, Earth is moving at about 100,000 km/h. Source) So to achieve this effect I would need to find an algorithm to make the stars rotate rather than flying through space(Time lapse speed, not 1500km/h speed). Luckily enough, processing already has a rotate class, all I had to do was provide it with an angle to rotate at.
+          </p>
+
+          <p>
+            Simply enough:<br>
+
+            angle = angle + 0.02 (this will keep the angle moving, think of 0.02 almost as the rate at which it rotates, the larger the angle, the faster it will spin. For the effect I want to achieve I want it to be slow, to mimic a time lapse)<br>
+
+            float c = cos(angle) (do some math)<br>
+
+            rotate (plug in our angle and ta da, a rotating night sky full of virtual stars)<br>
+          </p>
+          
+          <p>
+            This week I was also searching for some inspiration to make my piece more engaging or interactive. I thought I should do some research on what light pollution is and how it works, maybe this would help me create some ideas on how to display this information. I came across a few sites including <a href="http://www.azcentral.com/longform/news/local/arizona/2014/09/07/arizona-dark-skies-disappearing/15158485/" >this</a> and <a href="http://www.saturdayeveningpost.com/wp-content/uploads/satevepost/artificial-night-sky-brightness-USA.jpg">that</a> which were fairly insightful. I also watched a video that was interesting and kept me engaged throughout which you can watch <a href="http://vimeo.com/63766574">here</a>. 
+          </p>
+
+          <iframe src="https://player.vimeo.com/video/63766574?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/63766574">Light Pollution</a> from <a href="https://vimeo.com/joanny">Joanny Causse</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          
+          <p>
+            I’ve also been interested in integrating the Twitter API into my project, but have not come up with any interesting ideas that will add any sort of significant detail or depth to the project other than it being cool to have some twitter data. Maybe I could pull data that will generate the number of stars in the sky based on some trending topic. I did some research, there is actually a API integrated for processing called <a href="http://twitter4j.org/en/index.html">twitter4j</a> that I can play around with.
+          </p>
+          
+          <p>
+            I also considered instead of having the projector project my piece at a wall in front of the viewer, I would have it project upwards, so the viewer has to look up at it. The motion of looking up can create a similar perspective to looking up at the night sky, something most people rarely do. 
+          </p>
+          
+          <p>
+            Next week I’d like to prioritize making the physical piece for switching on and off a light bulb, while also switching between two states, first state being our current empty night sky, the second being a night sky without the effects of light pollution.
+          </p>
+
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Week 2 Progress / - There’s more stars in the universe than grains of sand on Earth </h2>
+
+          <p>
+            This week was mostly about finding inspiration and really defining the concepts I wanted to showcase within this installation. So far I’m still on the fence on how I want to present my concept. Although I know my main objective is to provide viewers with a greater perspective of our place in the cosmos through a visual and audio experience. 
+          </p>
+
+          <p>
+            I started searching around for art installations with a science theme, or science awareness concept. Here are a couple I’ve found which helped me figure out how I wanted to showcase my piece. 
+          </p>
+
+          <p><a href="http://museum.cornell.edu/exhibitions/leo-villareal.html">Leo Villareal: Cosmos</a></p>
+
+          <p><a href="http://emedia.art.sunysb.edu/christa/climateshifts.html#">Christa Erickson : Climate Shifts</a></p>
+
+          <p><a href="http://www.britastro.org/dark-skies/simulator.html#">Dan Nixon’s Light Pollution Simulator</a></p>
+
+          <p>I’ve come up with a few other ideas such as:</p>
+
+          <ul>
+            <li>As a listening experience to accompany looking up at the stars, have a compilation or montage of sound clips of various significant science discoveries throughout history</li>
+            <li>Have viewer sitting in a lawn chair looking up at the stars (If we can’t have this experience outside, have it inside).</li>
+            <li>Generate data/numbers through twitter API to display something visually(inspired by <a href="http://blog.blprnt.com/">Jer Thorpe's</a> data visualization with processing/twitter)</li>
+          </ul>
+
+          <p> Still unsure on how I want to make this interactive.</p>
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Mid-week 3 Progress / - It’s more than a billion cars burning 2 billion headlights</h2>
+
+          <p>Today I took into consideration the feedback I received from class which really helped to point me in the right direction. What I need to do now is really focus on a causation of light pollution that everyone participates in and display it through my installation. With that mission in mind, I decided on traffic data since it’s one of the leading factors of light pollution and it’s something I think I can get some good data on(I thought). Since I was already thinking of integrating twitter into my project; my original idea was to count tweets containing the keyword “traffic” within a 24 hour time period, this would generate a large enough number, which I could then use to populate thousands of stars in my processing sketch. I made some progress on receiving the tweets within 24hours, but I had to ask twitter for 1000 tweets, instead of counting them, and returning me a number. I wasn’t interested in the tweets information, I just needed a number.</p>
+
+          <pre>
+            <code>
+void getNewTweets(){
+  SimpleDateFormat sdf = new SimpleDateFormat("y-M-d");
+
+  Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.HOUR_OF_DAY, -24);
+
+  String yesterday = sdf.format(calendar.getTime());
+
+  Query query = new Query("traffic"); 
+    query.setSince(yesterday);
+    int numberOfTweets = 1024;
+    long lastID = Long.MAX_VALUE;
+    while (tweets.size () < numberOfTweets) {
+          if (numberOfTweets - tweets.size() > 100)
+             query.setCount(100);
+          else 
+            query.setCount(numberOfTweets - tweets.size());
+            try {
+                  QueryResult result = twitter.search(query);
+                  tweets.addAll(result.getTweets());
+                      println("Gathered " + tweets.size() + " tweets");
+                  for (Status t: tweets) 
+                    if(t.getId() < lastID) lastID = t.getId();
+                    }
+
+                    catch (TwitterException te) {
+                      println("Couldn't connect: " + te);
+                    }; 
+                    query.setMaxId(lastID-1);
+            }
+
+}
+            </code>
+          </pre>
+
+          <p>
+            Coming to a road block, I took to the forums and asked for some help. Within a day I received a reply back saying I wouldn’t be able to count tweets because “…Both the API’s are rate limited. You would have to use firehose to get all the tweets data and that is paid.” and a excerpt from twitter dev said “Before getting involved, it’s important to know that the Search API is focused on relevance and not completeness. This means that some Tweets and users may be missing from search results. If you want to match for completeness you should consider using a Streaming API instead”
+          </p>
+
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Week 4 Progress / - What does thirty thousand look like?</h2>
+
+          <p>Since I was unable to receive an updating count of the word “traffic” from twitter, I decided I needed another way of receiving data. Finding traffic data is surprisingly hard if you’re not willing to pay a big data collector. Eventually I found a convenient service on Toronto’s city website that collects <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=417aed3c99cc7310VgnVCM1000003dd60f89RCRD">signalized intersection traffic and pedestrian volume</a> which they provided the data in a excel document. The dataset contains traffic and pedestrian volume data collected at intersections where there are traffic signals. The data collected identifies 8 hour (generally 7:30 a.m. to 6:30 p.m. with breaks) and 24 hour vehicle and pedestrian traffic. This is exactly the kind of data and large numbers I needed to generate my desired view. </p>
+
+          <p>Now that I had access to a large data set I needed to parse the information and output the numbers so I could generate the desired amount of stars. To make the process of parsing the values easier, I converted the excel spreadsheet to a .csv (comma separated value file). There’s a method within Processing already that can create a table from a .csv, then from there I just need to collect the data from each row and store it in a integer variable.</p>
+
+          <pre><code>int getCarVol() {
+
+data = new int[table.getRowCount()+1];
+
+for (TableRow row : table.rows()) {
+i = i + 1;
+
+String carVol = row.getString(“8HrVehVol”);
+
+data[i] = Integer.parseInt(carVol.replace(“,”, “”));
+
+}
+float randNum = random(table.getRowCount());
+println(data[(int)randNum]);
+return data[(int)randNum]; //return random car volume
+
+}</code></pre>
+
+          <p>So far this will select a random row from the dataset and output the volume within the 8 hour vehicle volume column. I can then use this number to generate the number of stars. I can now visualize what 30 thousand cars would look like.</p>
+          <p>The data also provides the two intersecting streets, as well their latitude/longitude so I could possibly do something with that information. </p>
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Week 5 Progress / - There are approximately 400 billion stars in the Milky Way galaxy alone</h2>
+
+          <p>This week I needed to make the sky more visually appealing, by making my current black background look more like a natural night sky. Obviously not an easy task, but I think I found a solution that does not require any complex coding or rendering software. I wasn’t going for an exact simulation of the sky, I just wanted something that somewhat looks like the sky. At first I thought I could code a gradient of a very dark blue, but this proved to be difficult and interfered with the rendering of the stars. On a forum someone suggested using an image as a background instead of coding it. I took to photoshop and designed a sky to my liking with a dark blue gradient and added in some clouds which helped add some depth to the image. </p>
+
+          <p> I was rather happy with this, now I just needed to populate it with stars within processing. Again not too hard since processing already has a method to import images.</p>
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Week 7 Progress / - On a good night you can see 20 quadrillion miles, at least.</h2>
+
+          <p>After the meeting with David I decided to change the direction I wanted to go with my project. Rather than making my piece informative, I’d like to make it more of a satire on the current state of technology and how much it can interfere with our natural experiences. David brought up a good example with one of Louie CK’s jokes about parents watch their child’s dance recital with their phones/camera in front of their face instead of taking in the full experience which is happening right before their eyes. </p>
+          <p>I’d like to take a similar route by creating a ridiculousness scenario  of bringing the night sky indoors and watching it on our 60 inch TVs in full 5.1 surround sound, since we cannot view the night sky in its natural form within the city.</p>
+          <p>I’ve also considered renaming my project to make it more of punch line, or to hint at this being a satire so that viewers do not get the wrong idea. 
+          <br>Some working titles I have so far are…</p>
+          <ul>
+            <li>Couch Cosmos</li>
+            <li>TV Tray Stargazing</li>
+            <li>Virtual Night Out</li>
+            <li>Stargazing for the Home</li>
+          </ul>
+
+          <p>To further sell the ridiculousness of watching a sky on tv, I’ll have my installation set up as a living room, with a couch/coffee table and TV.
+
+          I’ve also considered changing the number of stars at a constant interval, as to further visualize the large variety of intersection and the large volumes of cars.  
+
+          Sound is my next priority, I’d like to bring a peaceful outdoor noise which will create an even more ridiculous scenario.</p>
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Week 8 Progress / - The second closest star to Earth is located about 4.2 light-years away</h2>
+
+          <p>Today I’ve made some good progress on my project. I had a few things I wanted to take care of, mainly adding sound, as well as picking a new traffic volume and making new stars appear periodically. One major issue I’ve ran into is very low FPS, it seems for such a simple sketch, I can only get 1-10 frames depending on the amount of stars generated. This will be the next problem to tackle.</p>
+          <p>To add music it was fairly simple, processing already has an included library called <a href="http://code.compartmental.net/tools/minim/">Minim</a> which deals with all things audio(player/recorder/input/output). I’ve really liked working with processing so far, so far it has been able to do everything I want it to, all in simple code. All I had to do was find a .mp3 sound clip of some nature ambience, add it to the processing folder, and add three lines of code.</p>
+          <pre><code>minim = new Minim(this);
+player = minim.loadFile(“night.mp3”);
+player.play();</code></pre>
+          <p>My next feature to add was generating a new number of stars periodically. At first this was a tough challenge, I wasn’t sure how I could set a specific time to receive a new number of stars. Eventually after a while of playing around with the code, I managed to use the use the refresh rate of the draw method to select a random number between 1-500, and if this number was less than 5 it would call my getCarVol() method which would then create a new set of stars to draw to the screen. So basically it has a 1/100 chance of generating new stars.</p>
+
+          <p>As mentioned my next issue is optimizing the FPS, which won’t be an easy task.</p>
+
+          <h2 class="subTitle" style="margin-top: 40px">/ Final Week /</h2>
+
+          <p>This past week I have been working on FPS optimization as well as a form of user interaction, because I felt it was lacking. Fortunately it was not too difficult to optimize the frame rate. The first step in doing this was to change the rendering mode within Processing to P3D, which adds depth to the render, and does some behind the scenes optimization. Although this was a boost in FPS, it wasn’t enough to get a fluid look, it was still stuttering and ruining the aesthetic of the starscape. At a road block, I took to the forums to look for some advice, maybe someone had a similar problem as me and was able to overcome it. Luckily enough a kind individual responded, and suggested I use a picture of a star(in this case a circle)  instead of making Processing draw each individual star as an eclipse. Sure enough, this had a significant impact on the frames, and was up to a smooth 30-60 fps, which made everything look a lot smoother. I also noticed since my background was repeating, I needed it to scroll infinitely and seamlessly, so that their was not a visible line showing where the background image started and ended. Easily enough, I just blacked out both sides of the image so they would transition seamlessly. </p>
+
+          <p>Great! My final project is nearly complete, but it was still lacking a key ingredient. Interaction. Since day 1 I couldn’t figure out how I wanted to create interaction with a user, while still keeping it within my composition. Throughout the project I’ve been toying the idea of using twitter but could not produce the results I wanted. Finally,a few days ago I thought I could use a twitter stream to find a specific hashtag phrase, and use that to trigger an event. Since I was already generating the stars at a random interval (the random interval didn’t have any conceptual value); I wanted to let the user tweet the phrase “#lightpollution” which would then trigger the stars to change, as well as send out a simple message to the twitter-verse, where it can be seen by a large number of people. My intention is to hopefully create conversation or a brief interest on the subject. </p>
+
+          <hr>
+
+          <h2 style="text-align: center; margin-bottom: 40px;">After Thoughts</h2>
+
+          <p>Looking back on a completed project you realize it’s never really completed, and there are a million things that could be done differently. For me what I accomplished was sufficient, but there’s a few other directions I could go with it. Here are the three things I would have done differently if I had the chance to do it over:</p>
+
+          <p><span style="font-size: 35px">1/</span> I would have made this a web application. Which is actually what I plan on doing with it when I have some spare time. The simplicity and calming nature of the visual night-scape accompanied by tranquil night sounds can create a certain atmosphere perfect for relaxing. Much like those yule log videos, just the sound and visual of a fire can to create a cozy atmosphere, without having the physical warmth or presence of the fireplace. Instead of making it a satirical installation, the virtual night-scape can simply be a web application to pull up and space out to when studying, cooking, doing the dishes etc. Giving a sense of the outdoors, without actually having to go out.</p>
+          <p> There exists a plugin called Processing.js that will actually ‘convert’ processing language to javascript for use on the web. This will be a great opportunity for me to play around with and learn Javascript, while also optimizing my current processing sketch for web use. Hopefully I can get a good domain name and some server space to make this something everyone can enjoy. I feel like I was trying too hard to make it this piece something that could be shown in an art gallery, rather than something that can be used as an application. For example: </p>
+
+          <p><a href="http://www.rainymood.com/">Rainy Mood</a></p>
+          <p><a href="http://www.noisli.com/">Noisli</a></p>
+          <p><a href="http://www.classyfireplace.com/">Classy Fireplace</a></p>
+
+          <p><span style="font-size: 35px">2/</span> I would have made use of the data set to a greater extent. The only thing I used from the Toronto traffic data set was the numbers, which could have come across as just arbitrary, without an explanation or context. I feel it should have had a bigger role in the visuals of the stars. A couple people had a fantastic idea to form the stars into the pattern of the intersection at which the number of cars were passing through. This could possibly give the viewer a greater sense of where the numbers are derived from, emphasizing the juxtaposition of vehicle traffic paired with the night sky. Unfortunately in my piece’s current state, this did not come across as well as I’d hoped.</p>
+
+          <p><span style="font-size: 35px">3/</span> More interaction! Seeing as this was 'Designing Interactive Objects’ I added a small way to interact with the installation by utilizing twitter, and having the user tweet to generate a new set of stars. I would have used this to a greater extent as well. It was a challenge to think of how a viewer could interact with the night sky. Looking back on it, I could have had the user interact by using gestures to move the stars around, but this would not have much context. It’s still hard to think of how interaction could enhance the experience while still maintaining some significant meaning in relation to the concept.</p>
+
+          <p>Completing a fully self made project by itself if a big accomplishment and something I’m proud of in itself. Three things I’m proud of for this project are:</p>
+
+          <p><span style="font-size: 35px">1/</span> Implementing twitter as a form of interaction. As mentioned I had a difficult time thinking of a form of interaction that would work well with my piece. Since I had scrapped the idea of having light pollution facts, or space facts at the beginning, I still wanted to have some sort of awareness for light pollution and space, or at least create some curiosity. Twitter being a social platform where many people can share experiences, I thought this would be the best way to spread some awareness, no matter how small. Whoever was willing to tweet out ’#lightpollution’ was able to reach out to their followers who are looking at their feed, hopefully creating some discussion or making people curious as to why their friend is tweeting this. The twitter interaction was simple, and still fit well into my concept.</p>
+
+          <p><span style="font-size: 35px">2/</span> Creating an artificial atmosphere. This is the effect I was going for, and I feel like I accomplished this. With a somewhat realistic looking stars,  moving clouds while accompanied by nature sounds all while in a cozy dark room accumulated into creating a peaceful care free environment for viewers.</p> 
+
+          <p><span style="font-size: 35px">3/</span> Using Processing for the first time. Although it wasn’t like learning a new programming language, since it’s based off Java, I still had that sense of accomplishment of learning and using a tool for the first time, and creating something I envisioned with it. Processing had many useful libraries and had a helpful user base that made the process of designing and programming this project a lot easier. I’m glad I discovered a new tool and hope to use it again in the future.</p>
+
+        <p>I feel like I learned a lot from this project. The main learning outcome for me was the actual process that goes on when creating and completing a project. Time management, iteration, the way ideas change over time all were a lesson. Also getting feedback from classmates also helped and taught me how valuable suggestions can be.</p> 
+
+        <p>Overall I thoroughly enjoyed this class, I’m glad I completed a self driven project, and that I have documentation of my whole process from start to finish which I can make use of. If I ever have other big projects that I’m working on by myself I feel like documenting it in a blog format was really helpful and something I can look back on.</p>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  <hr>
+    <div class="row">
+      <div id="center">
+        <p style="text-align: center"><a class="random-color noBorder" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+    /* Random Link Color-------------------- */
+    var randomLinks = $('a.random-color');
+    var original = randomLinks.css('color');
+    var colors = ["#16a085","#27ae60","#2980b9","#8e44ad","#f39c12","#d35400","#c0392b",]
+    randomLinks.hover(function() { //mouseover
+      var num = (Math.floor(Math.random() * colors.length))
+      var col = colors[num];
+      $(this).animate({
+        'color': col,
+      },100);
+    },function() { //mouseout
+      $(this).animate({
+        'color': original,
+      },500);
+    });
+  });
+
+  </script>
+
+  </body>
+</html>

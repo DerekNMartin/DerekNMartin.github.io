@@ -141,6 +141,13 @@ h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+h2.subTitle{
+  font-size: 24px;
+  font-weight: 300;
+  color: #757575; 
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #9E9E9E;
+}
 
 /* Larger than phablet */
 @media (min-width: 550px) {
@@ -158,24 +165,37 @@ p {
   line-height: 1.5;
   letter-spacing: .01rem;
   margin-top: 0; 
-  color: #212121; 
+  color: #212121;
 }
 p.date{
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
+  font-weight: 300;
   color: #757575;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 a {
   color: #212121; 
   text-decoration: none;
+  border-bottom: 1px solid #212121;
   }
 
+a.noBorder {
+  color: #212121; 
+  text-decoration: none;
+  border:none;
+  }
+
+a:hover {
+border-bottom-color: #2ecc71;
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -307,7 +327,13 @@ ol {
   list-style: decimal inside; }
 ol, ul {
   padding-left: 0;
-  margin-top: 0; }
+  margin-top: 0; 
+  font-family: 'Merriweather',Georgia,"Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: .01rem;
+  color: #212121; 
+}
 ul ul,
 ul ol,
 ol ol,
@@ -383,7 +409,6 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
-
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
