@@ -84,7 +84,7 @@
       font-size: 150px;
       font-family: 'Lobster', cursive;
       display: block;
-      margin-bottom: -50px;
+      margin-bottom: -25px;
     }
 
     #date {
@@ -122,7 +122,7 @@
 
 
   <div class="row">
-    <div class="center" style="margin-top: 15%">
+    <div class="center" style="margin-top: 10%">
       <p class="weatherInfo" id="name">Name</p>
       <p class="weatherInfo" id="weather">Beautiful</p>
       <p class="weatherInfo" id="temp">15&degC</p>
@@ -156,14 +156,24 @@
 function startTime() {
     var today=new Date();
     var hr = today.getHours();
-    var min = today.getMinutes();
-    var sec = today.getSeconds();
-  
-    min = checkTime(min);
-    sec = checkTime(sec);
+
     checkHour(hr);
 
-    document.getElementById('time').innerHTML = hr+":"+min+":"+sec;
+    function formatAMPM(date) {
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var second = date.getSeconds();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      second = checkTime(second);
+      minutes = checkTime(minutes);
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      var strTime = hours + ':' + minutes + ':' + second + ' ' + ampm;
+      return strTime;
+    }
+
+    document.getElementById('time').innerHTML = formatAMPM(today);
+    //document.getElementById('time').innerHTML = hr+":"+min+":"+sec;
     document.getElementById("date").innerHTML = today.toDateString();
     var t = setTimeout(function(){startTime()},500);
 }
@@ -174,35 +184,35 @@ function checkTime(i) {
 }
 
 function checkHour(hour) {
-    if (hour >=6 && hour < 9) {
+    if (hour >=5 && hour < 8) {
       document.body.style.background="url(./images/timeBG/morning.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 9 && hour < 12) {
+    if (hour >= 8 && hour < 11) {
       document.body.style.background="url(./images/timeBG/morningLate.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 12 && hour < 15) {
+    if (hour >= 11 && hour < 14) {
       document.body.style.background="url(./images/timeBG/noon.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 15 && hour < 18) {
+    if (hour >= 14 && hour < 17) {
       document.body.style.background="url(./images/timeBG/noonLate.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 18 && hour < 21) {
+    if (hour >= 17 && hour < 20) {
       document.body.style.background="url(./images/timeBG/evening.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 21 && hour < 23) {
+    if (hour >= 20 && hour < 22) {
       document.body.style.background="url(./images/timeBG/eveningLate.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour > 23 || hour < 3) {
+    if (hour >= 22 || hour < 2) {
       document.body.style.background="url(./images/timeBG/night.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
-    if (hour >= 3 && hour < 6) {
+    if (hour >= 2 && hour < 5) {
       document.body.style.background="url(./images/timeBG/nightLate.png) no-repeat center center fixed";
       document.body.style.backgroundSize= "cover";
     };
