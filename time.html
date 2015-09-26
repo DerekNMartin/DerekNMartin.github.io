@@ -125,6 +125,21 @@
           font-size: 20px;
         }
   }
+  @media only screen and (max-width : 360px) {
+    #time {
+    font-size: 80px;
+    margin-bottom: 0;
+    }
+    #date {
+      margin-top: 0;
+    }
+    #weatherInfo{
+      margin-top: 20px;
+    }
+      p.weatherInfo {
+        font-size: 20px;
+      }
+}
 
 </style>
 
@@ -181,13 +196,11 @@ function startTime() {
     function formatAMPM(date) {
       var hours = date.getHours();
       var minutes = date.getMinutes();
-      var second = date.getSeconds();
       var ampm = hours >= 12 ? 'pm' : 'am';
-      second = checkTime(second);
       minutes = checkTime(minutes);
       hours = hours % 12;
       hours = hours ? hours : 12; // the hour '0' should be '12'
-      var strTime = hours + ':' + minutes + ':' + second + ' ' + ampm;
+      var strTime = hours + ':' + minutes + ' ' + ampm;
       return strTime;
     }
 
