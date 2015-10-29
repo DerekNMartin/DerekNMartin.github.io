@@ -157,7 +157,7 @@
 
   <div class="row">
     <div id="weatherInfo">
-      <p class="weatherInfo" id="name">Name</p>
+      <p class="weatherInfo" id="name">City</p>
       <p class="weatherInfo" id="weather">Beautiful</p>
       <p class="weatherInfo" id="temp">15&degC</p>
     </div>
@@ -169,7 +169,7 @@
 
   $(document).ready(function() {
       var req = new XMLHttpRequest();
-      req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto,CA", true);
+      req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto,CA&APPID=a38778c120820e63562015def1c092a1", true);
       req.onreadystatechange = function() {
         if (this.status == 200 && this.readyState == 4){
         //convert to JSON

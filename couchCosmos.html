@@ -17,7 +17,7 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- CSS
@@ -29,10 +29,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Libraries 
+  <!-- Libraries
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="./script/jqueryColor.js"></script>  
+  <script src="./script/jqueryColor.js"></script>
 
 </head>
 <body>
@@ -40,17 +40,17 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container" style="margin-top: 2%">
-  
+
   <div class="row">
       <div class="center" style="text-align: center">
         <a href="index.html" class="noBorder">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            width="10%" viewBox="0 0 285.333 346.667" enable-background="new 0 0 285.333 346.667"
            xml:space="preserve">
-        <polyline fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" points="264,294 264,49 142.274,171.561 
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" points="264,294 264,49 142.274,171.561
           21.072,49 21.667,294.12 106.538,204.555 ">
 
-           <animate attributeName="stroke" 
+           <animate attributeName="stroke"
                         attributeType="XML"
                         from="#ecf0f1"
                         to="#2ecc71"
@@ -63,12 +63,12 @@
         </a>
     </div>
   </div>
-  
+
   <hr>
     <div class="row">
         <h1 style="text-align: center" > Couch Cosmos </h1>
         <h2 class="subTitle" style="text-align: center; border: none; font-size: 20px;"> A interactive installation I crafted to bring the awe-inspiring night sky to our living rooms.</h2>
-        <div class="nine columns center">
+        <div class="nine columns center article">
           <ul>
             <li>Form: Video Installation</li>
             <li>Tools Used: Processing, Photoshop</li>
@@ -93,7 +93,7 @@
           <h2 class="subTitle">/ Week 1 Progress / - You’re moving at 1600km/h as you read this.</h2>
 
           <p>
-            For this week, after hearing the much needed explanation of time running outI decided to get working on my project as soon as I could. My major priority at the moment is finding a sufficiently realistic star field that I can project using processing or MAX/MSP.  
+            For this week, after hearing the much needed explanation of time running outI decided to get working on my project as soon as I could. My major priority at the moment is finding a sufficiently realistic star field that I can project using processing or MAX/MSP.
           </p>
           <p>
             After scouring forums and learning some basic processing knowledge (which was not as difficult as I thought it was since it’s based on Java) I found a very small open source program that would help me achieve the star field effect I was going for. This code had the star field moving along the z axis, as if you were in a spaceship traveling through it. Instead I wanted the effect of looking up at these stars from earth, with a slight rotation to represent the earth rotating. Obviously to the naked we could never see the earth rotate just by looking up, but I really like the sense of perspective when viewing a star scape time lapse. It provides an alternative view of what is actually happening as we go on with our days. (Most people don’t put any thought to the fact that, relative to the Earth, we’re turning at ~1500 km/h at the equator. Relative to the Sun, Earth is moving at about 100,000 km/h. Source) So to achieve this effect I would need to find an algorithm to make the stars rotate rather than flying through space(Time lapse speed, not 1500km/h speed). Luckily enough, processing already has a rotate class, all I had to do was provide it with an angle to rotate at.
@@ -108,21 +108,21 @@
 
             rotate (plug in our angle and ta da, a rotating night sky full of virtual stars)<br>
           </p>
-          
+
           <p>
-            This week I was also searching for some inspiration to make my piece more engaging or interactive. I thought I should do some research on what light pollution is and how it works, maybe this would help me create some ideas on how to display this information. I came across a few sites including <a href="http://www.azcentral.com/longform/news/local/arizona/2014/09/07/arizona-dark-skies-disappearing/15158485/" >this</a> and <a href="http://www.saturdayeveningpost.com/wp-content/uploads/satevepost/artificial-night-sky-brightness-USA.jpg">that</a> which were fairly insightful. I also watched a video that was interesting and kept me engaged throughout which you can watch <a href="http://vimeo.com/63766574">here</a>. 
+            This week I was also searching for some inspiration to make my piece more engaging or interactive. I thought I should do some research on what light pollution is and how it works, maybe this would help me create some ideas on how to display this information. I came across a few sites including <a href="http://www.azcentral.com/longform/news/local/arizona/2014/09/07/arizona-dark-skies-disappearing/15158485/" >this</a> and <a href="http://www.saturdayeveningpost.com/wp-content/uploads/satevepost/artificial-night-sky-brightness-USA.jpg">that</a> which were fairly insightful. I also watched a video that was interesting and kept me engaged throughout which you can watch <a href="http://vimeo.com/63766574">here</a>.
           </p>
 
           <iframe src="https://player.vimeo.com/video/63766574?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/63766574">Light Pollution</a> from <a href="https://vimeo.com/joanny">Joanny Causse</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-          
+
           <p>
             I’ve also been interested in integrating the Twitter API into my project, but have not come up with any interesting ideas that will add any sort of significant detail or depth to the project other than it being cool to have some twitter data. Maybe I could pull data that will generate the number of stars in the sky based on some trending topic. I did some research, there is actually a API integrated for processing called <a href="http://twitter4j.org/en/index.html">twitter4j</a> that I can play around with.
           </p>
-          
+
           <p>
-            I also considered instead of having the projector project my piece at a wall in front of the viewer, I would have it project upwards, so the viewer has to look up at it. The motion of looking up can create a similar perspective to looking up at the night sky, something most people rarely do. 
+            I also considered instead of having the projector project my piece at a wall in front of the viewer, I would have it project upwards, so the viewer has to look up at it. The motion of looking up can create a similar perspective to looking up at the night sky, something most people rarely do.
           </p>
-          
+
           <p>
             Next week I’d like to prioritize making the physical piece for switching on and off a light bulb, while also switching between two states, first state being our current empty night sky, the second being a night sky without the effects of light pollution.
           </p>
@@ -131,11 +131,11 @@
           <h2 class="subTitle" style="margin-top: 40px">/ Week 2 Progress / - There’s more stars in the universe than grains of sand on Earth </h2>
 
           <p>
-            This week was mostly about finding inspiration and really defining the concepts I wanted to showcase within this installation. So far I’m still on the fence on how I want to present my concept. Although I know my main objective is to provide viewers with a greater perspective of our place in the cosmos through a visual and audio experience. 
+            This week was mostly about finding inspiration and really defining the concepts I wanted to showcase within this installation. So far I’m still on the fence on how I want to present my concept. Although I know my main objective is to provide viewers with a greater perspective of our place in the cosmos through a visual and audio experience.
           </p>
 
           <p>
-            I started searching around for art installations with a science theme, or science awareness concept. Here are a couple I’ve found which helped me figure out how I wanted to showcase my piece. 
+            I started searching around for art installations with a science theme, or science awareness concept. Here are a couple I’ve found which helped me figure out how I wanted to showcase my piece.
           </p>
 
           <p><a href="http://museum.cornell.edu/exhibitions/leo-villareal.html">Leo Villareal: Cosmos</a></p>
@@ -168,26 +168,26 @@ void getNewTweets(){
 
   String yesterday = sdf.format(calendar.getTime());
 
-  Query query = new Query("traffic"); 
+  Query query = new Query("traffic");
     query.setSince(yesterday);
     int numberOfTweets = 1024;
     long lastID = Long.MAX_VALUE;
     while (tweets.size () < numberOfTweets) {
           if (numberOfTweets - tweets.size() > 100)
              query.setCount(100);
-          else 
+          else
             query.setCount(numberOfTweets - tweets.size());
             try {
                   QueryResult result = twitter.search(query);
                   tweets.addAll(result.getTweets());
                       println("Gathered " + tweets.size() + " tweets");
-                  for (Status t: tweets) 
+                  for (Status t: tweets)
                     if(t.getId() < lastID) lastID = t.getId();
                     }
 
                     catch (TwitterException te) {
                       println("Couldn't connect: " + te);
-                    }; 
+                    };
                     query.setMaxId(lastID-1);
             }
 
@@ -237,7 +237,7 @@ return data[(int)randNum]; //return random car volume
 
           <p>After the meeting with David I decided to change the direction I wanted to go with my project. Rather than making my piece informative, I’d like to make it more of a satire on the current state of technology and how much it can interfere with our natural experiences. David brought up a good example with one of Louie CK’s jokes about parents watch their child’s dance recital with their phones/camera in front of their face instead of taking in the full experience which is happening right before their eyes. </p>
           <p>I’d like to take a similar route by creating a ridiculousness scenario  of bringing the night sky indoors and watching it on our 60 inch TVs in full 5.1 surround sound, since we cannot view the night sky in its natural form within the city.</p>
-          <p>I’ve also considered renaming my project to make it more of punch line, or to hint at this being a satire so that viewers do not get the wrong idea. 
+          <p>I’ve also considered renaming my project to make it more of punch line, or to hint at this being a satire so that viewers do not get the wrong idea.
           <br>Some working titles I have so far are…</p>
           <ul>
             <li>Couch Cosmos</li>
@@ -248,7 +248,7 @@ return data[(int)randNum]; //return random car volume
 
           <p>To further sell the ridiculousness of watching a sky on tv, I’ll have my installation set up as a living room, with a couch/coffee table and TV.
 
-          I’ve also considered changing the number of stars at a constant interval, as to further visualize the large variety of intersection and the large volumes of cars.  
+          I’ve also considered changing the number of stars at a constant interval, as to further visualize the large variety of intersection and the large volumes of cars.
 
           Sound is my next priority, I’d like to bring a peaceful outdoor noise which will create an even more ridiculous scenario.</p>
 
@@ -290,22 +290,25 @@ player.play();</code></pre>
 
           <p><span style="font-size: 35px">1/</span> Implementing twitter as a form of interaction. As mentioned I had a difficult time thinking of a form of interaction that would work well with my piece. Since I had scrapped the idea of having light pollution facts, or space facts at the beginning, I still wanted to have some sort of awareness for light pollution and space, or at least create some curiosity. Twitter being a social platform where many people can share experiences, I thought this would be the best way to spread some awareness, no matter how small. Whoever was willing to tweet out ’#lightpollution’ was able to reach out to their followers who are looking at their feed, hopefully creating some discussion or making people curious as to why their friend is tweeting this. The twitter interaction was simple, and still fit well into my concept.</p>
 
-          <p><span style="font-size: 35px">2/</span> Creating an artificial atmosphere. This is the effect I was going for, and I feel like I accomplished this. With a somewhat realistic looking stars,  moving clouds while accompanied by nature sounds all while in a cozy dark room accumulated into creating a peaceful care free environment for viewers.</p> 
+          <p><span style="font-size: 35px">2/</span> Creating an artificial atmosphere. This is the effect I was going for, and I feel like I accomplished this. With a somewhat realistic looking stars,  moving clouds while accompanied by nature sounds all while in a cozy dark room accumulated into creating a peaceful care free environment for viewers.</p>
 
           <p><span style="font-size: 35px">3/</span> Using Processing for the first time. Although it wasn’t like learning a new programming language, since it’s based off Java, I still had that sense of accomplishment of learning and using a tool for the first time, and creating something I envisioned with it. Processing had many useful libraries and had a helpful user base that made the process of designing and programming this project a lot easier. I’m glad I discovered a new tool and hope to use it again in the future.</p>
 
-        <p>I feel like I learned a lot from this project. The main learning outcome for me was the actual process that goes on when creating and completing a project. Time management, iteration, the way ideas change over time all were a lesson. Also getting feedback from classmates also helped and taught me how valuable suggestions can be.</p> 
+        <p>I feel like I learned a lot from this project. The main learning outcome for me was the actual process that goes on when creating and completing a project. Time management, iteration, the way ideas change over time all were a lesson. Also getting feedback from classmates also helped and taught me how valuable suggestions can be.</p>
 
         <p>Overall I thoroughly enjoyed this class, I’m glad I completed a self driven project, and that I have documentation of my whole process from start to finish which I can make use of. If I ever have other big projects that I’m working on by myself I feel like documenting it in a blog format was really helpful and something I can look back on.</p>
-        
+
       </div>
     </div>
   <hr>
-    <div class="row">
-      <div id="center">
-        <p style="text-align: center"><a class="random-color noBorder" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
-      </div>
-    </div>
+
+  <div class="row">
+    <footer class="center">
+      <p class="date">derek.n.martin@gmail.com</p>
+      <p id="twitter"><a class="random-color noBorder" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
+    </footer>
+  </div>
+
   </div>
 
   <!-- Script
