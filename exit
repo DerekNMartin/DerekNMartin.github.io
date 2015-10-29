@@ -1,0 +1,251 @@
+[33mcommit 239d9291cb822e1f26b5a182f85b9843cc143f25[m
+Author: Derek Martin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 23:54:59 2015 -0400
+
+    Bug Fix: bg change/ @4hr to 12hr format
+
+[33mcommit 7736231ed4fa0b7644e8e42fa8f05f759380d68a[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 22:05:41 2015 -0400
+
+    all
+
+[33mcommit 3245c42808bd5374a7885bc225eb06eef0c6bafd[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 21:51:33 2015 -0400
+
+    removed time file
+    
+    removed time file
+
+[33mcommit aa41335be61afe259c69781e50a2c07b6f367753[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 21:43:10 2015 -0400
+
+    Remove .html
+    
+    Remove .html
+
+[33mcommit 68442713dfe0ca21f0f6b23a4aa229276b94993f[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 21:34:02 2015 -0400
+
+    Remove .html
+    
+    Remove .html
+
+[33mcommit db9b036b36b72a5259b1c18c448e00485304c9a7[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 21:31:16 2015 -0400
+
+    htaccess
+    
+    Tidy up that URL!
+
+[33mcommit 9e75c1e87300cadaa5be4cec6ec5c48efd1e4f30[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 14 21:22:06 2015 -0400
+
+    Time - Project Page
+    
+    Created a new project on stream from start to finish.
+    Simple display of time/date/weather. Background changes based on time of
+    day.
+    Would like to add music streaming, suing Spotify API.
+
+[33mcommit 8c91349566daebfb0b75dbafeeeb8ca7a050466b[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Aug 7 14:27:03 2015 -0400
+
+    Couch Cosmos Project
+    
+    Added new project page.
+
+[33mcommit 53f34a82355ecb488aff9d01c40b0a0b085af0fb[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Tue Jul 7 15:17:06 2015 -0400
+
+    New Additions
+    
+    -Changed fonts
+    -Added random colour to project links
+    -Added more professional copy
+
+[33mcommit 0e0d4b6e7440ba92ef23799260200498e3b3e158[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Sat Jul 4 16:55:19 2015 -0400
+
+    Redesign Again
+    
+    Changed background, added overflow scroll for projects.
+
+[33mcommit 46943c26e3431576dd82ccd4295cafeeea76aa74[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Sat Jul 4 01:40:10 2015 -0400
+
+    Title
+    
+    Title Change
+
+[33mcommit 7ca6c2e5a237f1abc97a3232edd1910b4c856cf1[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Sat Jul 4 01:36:28 2015 -0400
+
+    Re-Design
+    
+    Re-design of whole layout. Keep It Simple Stupid.
+
+[33mcommit 9fa2aa6a4bb2407b6e6e5b54da2f374cba237d70[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 12:45:25 2015 -0400
+
+    coming soon
+
+[33mcommit 203a78632f487e13a77d9cf8742c4b6a03952bea[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 12:39:34 2015 -0400
+
+    coming soon
+
+[33mcommit fb8dd5b0103fb76db37e67765e3bb184fe9772bd[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 12:31:45 2015 -0400
+
+    coming soon
+
+[33mcommit 712b2671c96406d7b8c8c3c91ef7b9d6c02a8fe3[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 12:29:31 2015 -0400
+
+    coming soon
+
+[33mcommit e08a1254919c17f11d6db65214f9e71be8e6d47d[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 12:28:40 2015 -0400
+
+    coming soon
+
+[33mcommit f023df7b80311b524c3b0bc134d1a54d5e443f12[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 11:11:18 2015 -0400
+
+    Rename comingsoon.html to index.html
+
+[33mcommit 47cef0b6a658142be1589c1ec93d58f5d36c7e51[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu May 28 11:11:03 2015 -0400
+
+    Rename index.html to main.html
+
+[33mcommit a3036e1f4e3f14a51a0877e94c2720a7929db237[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Sat May 16 12:20:40 2015 -0400
+
+    Remove Coming Soon
+
+[33mcommit 535ebc8ba359f6687619cd880c6b0c6c7e323927[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Sat May 16 12:18:01 2015 -0400
+
+    Mouseover Links/Responsive
+    
+    taskbar/text is responsive to desktop/laptop/mobile
+    Links display random colour on mouse over
+
+[33mcommit cf1a8c617eee20d6eff0a30531ee4b86acf68037[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Mar 27 12:15:13 2015 -0400
+
+    Edit mouseover
+
+[33mcommit 01350895365ca80d9539c27a7a049a7b8e30a484[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Mar 27 10:28:43 2015 -0400
+
+    Add link mouseOver event JS
+
+[33mcommit a6bcd04782675024dfbedfbb4c567b8ec21f908c[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Fri Mar 27 10:17:03 2015 -0400
+
+    ADD link mouseOver event JS
+    
+    changes colours of links randomly
+
+[33mcommit fd70ce43aa02caf009b5d5d0a48bd5ddc8f6d1da[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:55:35 2015 -0400
+
+    edit
+
+[33mcommit 9c25f55e4a6aab3492b9299e3292f6d8a2018e6e[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:44:24 2015 -0400
+
+    twitter icon color
+
+[33mcommit dccf4c3cb004df1e6eb622a7c04e7947c7d34761[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:36:10 2015 -0400
+
+    edit favicon logo
+
+[33mcommit eeec96552553296c0808fca2702ec08024be2972[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:34:02 2015 -0400
+
+    Update index.html
+
+[33mcommit 374a473467e49adaae07666a932aed3d5cbfb20a[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:20:02 2015 -0400
+
+    Update index.html
+
+[33mcommit 84fb31f09166a77da249b9d7acf4171668fbf265[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:17:05 2015 -0400
+
+    Update index.html
+
+[33mcommit 819c2f155949ed308e37febdf1e55d4e8ba58d37[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:14:50 2015 -0400
+
+    Update index.html
+
+[33mcommit 53629cf7a70d6d4c86d45ea5045bc1abcaa0a5e2[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 21:01:15 2015 -0400
+
+    Add "Coming Soon..." page
+
+[33mcommit 9c920c79412670e4f389a65a0cc67132e4f8f9c6[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 18:56:02 2015 -0400
+
+    CNAME
+
+[33mcommit 67602c3dcb304b937be6f1e3d026f0e76b31d644[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 18:48:19 2015 -0400
+
+    Delete CNAME
+
+[33mcommit 84517fd621a79db743ddb418d77a281722bed76d[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Thu Mar 26 18:38:30 2015 -0400
+
+    Create CNAME
+
+[33mcommit dbdbaa95d4ec017a19211576ff4d2df4ab6a685d[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Wed Jan 7 20:18:39 2015 -0500
+
+    Replace master branch with page content via GitHub
+
+[33mcommit 541e2598f75ae175825b7f0430d3e0f414b2ec39[m
+Author: DerekNMartin <derek.n.martin@gmail.com>
+Date:   Wed Jan 7 20:10:05 2015 -0500
+
+    Personal Page
