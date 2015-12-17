@@ -16,9 +16,11 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <!--Icons-->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,12 +41,13 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<div class="container" style="margin-top: 3%" id="mainpage">
+<div id="wrapper">
+<div class="container" id="mainpage">
 
-  <div class="row">
-      <div class="five columns">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           width="90%" viewBox="0 0 285.333 346.667" enable-background="new 0 0 285.333 346.667"
+  <div class="row" style="margin-top: 40px">
+      <div class="four columns" id="center">
+        <svg version="1.1" id="center" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="70%" viewBox="0 0 285.333 346.667" enable-background="new 0 0 285.333 346.667"
            xml:space="preserve">
         <polyline fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" points="264,294 264,49 142.274,171.561
           21.072,49 21.667,294.12 106.538,204.555 ">
@@ -59,18 +62,24 @@
                         repeatCount="indefinite"/>
         </polyline>
         </svg>
-  </div>
-
-    <div class="seven columns">
-        <p id="aboutMe">Derek Martin is attending York University studying Digital Media and is an aspiring User Experience Designer based in Toronto.</p>
     </div>
-
   </div>
+
+      <div class="row" id="aboutMe">
+        <h1>DEREK MARTIN.</h1>
+      </div>
+
+      <div class="row" id="aboutMe">
+          <p>Attending York University.</p>
+          <p>Studying Digital Media.</p>
+          <p>Aspiring User Experience Designer.</p>
+          <p>Based in Toronto.</p>
+      </div>
 
 <hr>
 
   <div class="row">
-    <div class="scroll" style="text-align: center">
+    <div class="scroll">
       <h3><a class="random-color noBorder" href="couchCosmos">Couch Cosmos</a></h3>
       <p class="date">10 / 01 / 2014</p>
       <h3><a class="random-color noBorder" href="time">Time</a></h3>
@@ -86,11 +95,13 @@
 
     <div class="row">
       <footer class="center">
-        <p class="date">derek.n.martin@gmail.com</p>
+        <p class="footer"><a href="">about</a></p>
+        <p class="footer">derek.n.martin@gmail.com</p>
         <p style="text-align: center"><a class="random-color noBorder" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter fa-lg"></i></a></p>
       </footer>
     </div>
 
+</div>
 </div>
 
 <!-- End Document
