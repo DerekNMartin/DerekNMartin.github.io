@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <!--Icons-->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <script>
+
+  var movieJSON =
+    '[{ "title":"The Revenant" , "rating":"9" },'+
+    '{ "title":"Ex Machina" , "rating":"9" },'+
+    '{ "title":"Spotlight" , "rating":"8" },'+
+    '{ "title":"The Hateful Eight" , "rating":"9" },'+
+    '{ "title":"star wars the force awakens" , "rating":"9" },'+
+    '{ "title":"Mad Max: Fury Road" , "rating":"9" },'+
+    '{ "title":"Inside Out" , "rating":"7" },'+
+    '{ "title":"Room" , "rating":"8" },'+
+    '{ "title":"Sicario" , "rating":"7" },'+
+    '{ "title":"Mission Impossible: Rogue Nation" , "rating":"7" },'+
+    '{ "title":"Ant Man" , "rating":"6" },'+
+    '{ "title":"Steve Jobs" , "rating":"7" },'+
+    '{ "title":"Everest" , "rating":"7" },'+
+    '{ "title":"The Man from UNCLE" , "rating":"6" },'+
+    '{ "title":"Legend" , "rating":"8" },'+
+    '{ "title":"The Big Short" , "rating":"7" },'+
+    '{ "title":"Bridge of Spies" , "rating":"6" },'+
+    '{ "title":"Deadpool" , "rating":"8" }]';
+  var movieList = JSON.parse(movieJSON);
+  //console.log(movieList[0].title);
+    //GET MOVIE DATA----------------------------------------------------------------
+
+function requestMovie(index){
+
+  var request = new XMLHttpRequest();
+  var movieName = movieList[index].title;
+
+  request.open('GET', 'http://www.omdbapi.com/?t='+movieName+'&tomatoes=true');
+
+  request.setRequestHeader('Accept', 'application/json');
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      var movieInfo = JSON.parse(this.responseText);
+      var movie = {title:"",year:"",dir:"",img:"",tomato:"",imdb:"",rating:""};
+
+      movie.title = movieInfo.Title;
+      movie.year = movieInfo.Year;
+      movie.img = movieInfo.Poster;
+      movie.dir = movieInfo.Director;
+      movie.imdb = movieInfo.imdbRating;
+      movie.tomato = movieInfo.tomatoRating;
+      movie.rating = movieList[index].rating;
+      console.log(movie);
+      $(".row").append("<div class='overlay movieCard' id=\""+index+"\"></div>");
+      $('#'+index).append('<h1 class="myRating">' + movie.rating + '</h1>');
+      $('#'+index).append('<h2 class="movieTitle">' + movie.title +' (' + movie.year + ')</h2>');
+      $('#'+index).append('<h3 class="dir">Directed by: '+movie.dir+'</h3>');
+      $('#'+index).append('<p class="rating"> IMDB: ' +movie.imdb +' | Rotten Tomatoes: ' + movie.tomato +'</p>');
+      $('#'+index).css({'background-image': "url("+movie.img+")", 'background-repeat': 'no-repeat'});
+    }
+  };
+  request.send();
+}
+
+for (var i = 0; i <= movieList.length; i++){
+  requestMovie(i);
+}
+
+  </script>
+
+</head>
+<body>
+
+<div class="row">
+</div>
+
+</body>
+</html>

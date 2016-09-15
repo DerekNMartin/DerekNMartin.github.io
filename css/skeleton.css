@@ -141,6 +141,7 @@ h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
 h2.subTitle{
   font-size: 20px;
   font-weight: 300;
@@ -541,5 +542,41 @@ footer p{
   font-weight:300;
   text-align: center;
 }
+
+.movieCard {
+  text-align: center;
+  color: black;
+  width: 255px;
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+}
+
+h1.myRating {
+  color: white;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30.0rem;
+  font-weight: 800;
+  padding-bottom: 75px;
+}
+
+h2.movieTitle {
+  font-size: 2.5rem;
+  font-family: 'Inconsolata',Georgia,"Times New Roman", serif;
+}
+
+h3.dir {
+  font-size: 1.5rem;
+  font-family: 'Inconsolata',Georgia,"Times New Roman", serif;
+}
+
+p.rating {
+  font-size: 1.5rem;
+  font-family: 'Inconsolata',Georgia,"Times New Roman", serif;
+  margin-bottom:0;
+}
+
+
 
 /* ----------CUSTOM END------------- */
