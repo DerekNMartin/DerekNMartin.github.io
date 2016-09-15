@@ -16,7 +16,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -34,6 +34,18 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="./script/jqueryColor.js"></script>
+  
+    <!-- Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-80637173-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 
 </head>
 <body>
@@ -67,7 +79,7 @@
 
   <hr>
     <div class="row">
-        <h1 style="text-align: center" > Derek Martin </h1>
+        <h1 class="title" > DEREK MARTIN </h1>
 
         <div class="contact">
           13 Elia Lane | Toronto | Canada</br>
@@ -76,10 +88,10 @@
         </div>
 
       <div class ="row">
-        <h2 class="subTitle" style="margin-top: 40px"><strong>Education:</strong></h2>
-        <div class="eight columns">
+        <h2 class="subTitle" id="education"><strong>Education:</strong></h2>
+        <div class="ten columns">
           <dl>
-            <dt>Honours Bachelor of Arts in Digital Media</dt>
+            <h3 class="position">Honours Bachelor of Arts in Digital Media</h3>
             <dt>York University, Toronto</dt>
             <dd>Course Work: </dd>
               <dd>Human-Computer Interaction, User Interfaces, Introduction to Database Systems, Discrete Mathematics for Computer Science, Datastructures and Algorithms, Computer Network Protocols
@@ -89,8 +101,8 @@ and Applications</dd>
       </div>
 
       <div class="row">
-        <h2 class="subTitle" style="margin-top: 40px"><strong>Skills</strong></h2>
-        <div class="eight columns">
+        <h2 class="subTitle" id="skills"><strong>Skills</strong></h2>
+        <div class="ten columns">
                 <dl>
                   <dt>Proficient in:</dt>
                     <dd>HTML5/CSS3, Javascript, Java, Max/MSP/Jitter, JQuery, Processing</dd>
@@ -101,54 +113,67 @@ and Applications</dd>
       </div>
 
     <div class="row">
-      <h2 class="subTitle" style="margin-top: 40px"><strong>Experience</strong></h2>
-      <div class="eight columns">
+      <h2 class="subTitle" id="experience"><strong>Experience</strong></h2>
+      <div class="ten columns">
         <dl>
-          <dt><a href="http://dm.finearts.yorku.ca/~martinde/gallery/">AMPD's Digital Media Gallery</a> - Web Designer</dt>
-          <dd>October 2015 - March 2016 </dd>
-          <dd>York University, Toronto</dd>
+          <h3 class="position">York University Career Centre - Web & Marketing Assistant</h3>
+          <dt>May 2016 - present </dt>
+          <dt>York University, Toronto</dt>
+          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dd>
+          <dd>• Responsible for making website updates using WordPress, HTML and CSS.</dd>
+          <dd>• Assisting with creation of marketing materials to promote Career Centre events (in keeping with York University graphic standards)</dd>
+          <dd>• Project management skills, including setting goals and time management</dd>
+        </dl>
+        
+        <hr>
+        
+        <dl>
+          <h3 class="position">AMPD's Digital Media Gallery - Web Designer</h3>
+          <dt>October 2015 - March 2016 </dt>
+          <dt>York University, Toronto</dt>
+          <dt>[Wordpress, HTML/CSS, Javascript]</dt>
           <dd>Responsible for designing and developing the gallery page to showcase Digital Media students' projects.</dd>
-          <dd>[Wordpress, HTML/CSS, Javascript]</dd>
         </dl>
         <hr>
         <dl>
-          <dt><a href="http://dm.finearts.yorku.ca/~martinde/outreach/index.php">Digital Media's Outreach Program</a> - Web Designer</dt>
-          <dd>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dd>
-          <dd>York University, Toronto</dd>
+          <h3 class="position">Digital Media's Outreach Program - Web Designer</h3>
+          <dt>York University, Toronto</dt>
+          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dt>
           <dd>Working with a development team of fellow digital media undergraduates to design and develop a curriculum to interest young children in programming, physical computing and intereaction design. </dd>
         </dl>
         <hr>
         <dl>
-          <dt><a href="http://dmstudents.ca/">Digital Media Student Association</a> - Web Designer</dt>
-          <dd>Summer 2014</dd>
-          <dd>York University, Toronto</dd>
+          <h3 class="position"><a href="http://dmstudents.ca/">Digital Media Student Association</a> - Web Designer</h3>
+          <dt>Summer 2014</dt>
+          <dt>York University, Toronto</dt>
+          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dt>
           <dd>Designing and developing a website for the digital media student association. The website is intended to provide useful information for Digital Media students including tutoring sesions, event dates, and general program information.</dd>
         </dl>
         <hr>
         <dl>
-          <dt>Customer Service Representative</dt>
-          <dd>May 2011 - September 2015</dd>
-          <dd>Longo's Grocery Company, Burlington</dd>
+          <h3 class="position">Customer Service Representative</h3>
+          <dt>May 2011 - September 2015</dt>
+          <dt>Longo's Grocery Company, Burlington</dt>
           <dd>Providing exceptional service to customers through clear communication skills, patience, attentiveness, and understanding the customer’s needs. Handling money. Reacting to a fast paced environment.</dd>
         </dl>
       </div>
     </div>
 
     <div class="row">
-      <h2 class="subTitle" style="margin-top: 40px"><strong>Extracuricular</strong></h2>
-      <div class="eight columns">
+      <h2 class="subTitle" id="extra"><strong>Extracuricular</strong></h2>
+      <div class="ten columns">
         <dl>
-          <dt>Vice President - Digital Media Student Association</dt>
-          <dd>2015 - present</dd>
-          <dd>Ensure representation of DM students on affiliated	Faculty	Councils,	as per the request of relevant student government	bodies.</dd>
-          <dd>Responsible	for	the	design of promotional materials for web and print.</dd>
+          <h3 class="position">Vice President - Digital Media Student Association</h3>
+          <dt>2015 - present</dt>
+          <dd>• Ensure representation of DM students on affiliated	Faculty	Councils,	as per the request of relevant student government	bodies.</dd>
+          <dd>• Responsible	for	the	design of promotional materials for web and print.</dd>
         </dl>
         <hr>
         <dl>
-          <dt>Director of Public Relations - Digital Media Student Association</dt>
-          <dd>2014 - 2015</dd>
-          <dd>Responsible	for	the	design	and	distribution of promotional materials via web and print.</dd>
-          <dd>Ensure the DMSA website is kept up to	date.</dd>
+          <h3 class="position">Director of Public Relations - Digital Media Student Association</h3>
+          <dt>2014 - 2015</dt>
+          <dd>• Responsible	for	the	design	and	distribution of promotional materials via web and print.</dd>
+          <dd>• Ensure the DMSA website is kept up to	date.</dd>
         </dl>
       </div>
     </div>
