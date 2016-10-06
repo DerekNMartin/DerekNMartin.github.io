@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>DerekMartin.</title>
+  <meta name="Derek's personal space on the interwebs." content="">
+  <meta name="Derek Martin" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Libraries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./script/jqueryColor.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container" style="margin-top: 2%">
+
+  <div class="row">
+      <div class="center" style="text-align: center">
+        <a href="index.html" class="noBorder">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="10%" viewBox="0 0 285.333 346.667" enable-background="new 0 0 285.333 346.667"
+           xml:space="preserve">
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" points="264,294 264,49 142.274,171.561
+          21.072,49 21.667,294.12 106.538,204.555 ">
+
+           <animate attributeName="stroke"
+                        attributeType="XML"
+                        from="#ecf0f1"
+                        to="#2ecc71"
+                        dur="20s"
+                        values="#ecf0f1; #2ecc71; #e74c3c; #9b59b6; #f1c40f; #3498db; #ecf0f1"
+                        keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 1"
+                        repeatCount="indefinite"/>
+        </polyline>
+        </svg>
+        </a>
+    </div>
+  </div>
+    <div class="row">
+        <h1 style="text-align: center"> 13 Elia Tally </h1>
+        <div class="center" style="text-align: center; padding-top: 40px">
+          <button class="button-tally" id="reset">Reset All</button>
+        </div>
+
+    </div>
+    <hr>
+          <div class="u-max-full-width" style="margin-top: 50px;">
+
+            <div class="row">
+              <div class="twelve columns" style="text-align: center">
+                <h1>DEREK</h1>
+                <div class="bigNumber" id="d">0</div>
+                <button class="button-tally" id="dt">Tally up!</button>
+                <hr>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="six columns" style="text-align: center">
+                <h1>MIKE</h1>
+                <div class="bigNumber" id="s">0</div>
+                <button class="button-tally" id="st">Tally up!</button>
+                <hr>
+              </div>
+
+                <div class="six columns" style="text-align: center">
+                  <h1>SVYATO</h1>
+                  <div class="bigNumber" id="j">0</div>
+                  <button class="button-tally" id="jt">Tally up!</button>
+                  <hr>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="six columns" style="text-align: center">
+                  <h1>JUSTIN</h1>
+                  <div class="bigNumber" id="m">0</div>
+                    <button class="button-tally" id="mt">Tally up!</button>
+                    <hr>
+                </div>
+
+                <div class="six columns" style="text-align: center">
+                  <h1>ANTHONY</h1>
+                  <div class="bigNumber" id="a">0</div>
+                  <button class="button-tally" id="at">Tally up!</button>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  <!-- Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+    /* Random Link Color-------------------- */
+    var randomLinks = $('a.random-color');
+    var original = randomLinks.css('color');
+    var colors = ["#16a085","#27ae60","#2980b9","#8e44ad","#f39c12","#d35400","#c0392b",]
+    randomLinks.hover(function() { //mouseover
+      var num = (Math.floor(Math.random() * colors.length))
+      var col = colors[num];
+      $(this).animate({
+        'color': col,
+      },100);
+    },function() { //mouseout
+      $(this).animate({
+        'color': original,
+      },500);
+    });
+
+    /*Counter----------------------------*/
+    var dc = localStorage.getItem("dc") || 1;
+    var ac = localStorage.getItem("ac") || 1;
+    var sc = localStorage.getItem("sc") || 1;
+    var jc = localStorage.getItem("jc") || 1;
+    var mc = localStorage.getItem("mc") || 1;
+
+    document.getElementById("d").innerHTML = dc;
+    document.getElementById("a").innerHTML = ac;
+    document.getElementById("j").innerHTML = jc;
+    document.getElementById("s").innerHTML = sc;
+    document.getElementById("m").innerHTML = mc;
+
+    var reply_click = function()
+    {
+        if (this.id == "reset") {
+          console.log("test");
+          dc = 0;
+          ac = 0;
+          mc = 0;
+          sc = 0;
+          jc = 0;
+          localStorage.setItem("dc", 0);
+          localStorage.setItem("ac", 0);
+          localStorage.setItem("sc", 0);
+          localStorage.setItem("jc", 0);
+          localStorage.setItem("mc", 0);
+          document.getElementById("d").innerHTML = 0;
+          document.getElementById("a").innerHTML = 0;
+          document.getElementById("m").innerHTML = 0;
+          document.getElementById("s").innerHTML = 0;
+          document.getElementById("j").innerHTML = 0;
+        }
+
+        if (this.id == "dt") {
+          document.getElementById("d").innerHTML = ++dc;
+          localStorage.setItem("dc", dc);
+        }
+        if (this.id == "at") {
+          document.getElementById("a").innerHTML = ++ac;
+          localStorage.setItem("ac", ac);
+        }
+        if (this.id == "st") {
+          document.getElementById("s").innerHTML = ++sc;
+          localStorage.setItem("sc", sc);
+        }
+        if (this.id == "mt") {
+          document.getElementById("m").innerHTML = ++mc;
+          localStorage.setItem("mc", mc);
+        }
+        if (this.id == "jt") {
+          document.getElementById("j").innerHTML = ++jc;
+          localStorage.setItem("jc", jc);
+        }
+
+    }
+    document.getElementById('dt').onclick = reply_click;
+    document.getElementById('at').onclick = reply_click;
+    document.getElementById('mt').onclick = reply_click;
+    document.getElementById('jt').onclick = reply_click;
+    document.getElementById('st').onclick = reply_click;
+    document.getElementById('reset').onclick = reply_click;
+  });
+
+  </script>
+
+  </body>
+</html>

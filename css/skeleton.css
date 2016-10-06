@@ -626,6 +626,29 @@ h3.position{
 #extra {
   color: #f39c12;
 }
+
+.bigNumber {
+  font-family: 'Inconsolata',Georgia,"Times New Roman", serif;
+  font-size: 20rem;
+  font-weight: bold;
+  color: #757575;
+}
+
+.button-tally {
+  color: white;
+  background-color: #2ecc71;
+  border: none;
+  font-size: 2rem;
+}
+
+.button-tally:hover {
+  background-color: #27ae60;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+
 >>>>>>> origin/master
 
 /* ----------CUSTOM END------------- */
