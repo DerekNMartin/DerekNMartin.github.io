@@ -80,6 +80,12 @@
                 <button class="button-tally" id="dt">Tally up!</button>
                 <hr>
               </div>
+              <div class="twelve columns" style="text-align: center">
+                <h1>NIGEL</h1>
+                <div class="bigNumber" id="n">0</div>
+                <button class="button-tally" id="nt">Tally up!</button>
+                <hr>
+              </div>
             </div>
 
             <div class="row">
@@ -145,12 +151,14 @@
     var sc = localStorage.getItem("sc") || 0;
     var jc = localStorage.getItem("jc") || 0;
     var mc = localStorage.getItem("mc") || 0;
+    var mc = localStorage.getItem("nc") || 0;
 
     document.getElementById("d").innerHTML = dc;
     document.getElementById("a").innerHTML = ac;
     document.getElementById("j").innerHTML = jc;
     document.getElementById("s").innerHTML = sc;
     document.getElementById("m").innerHTML = mc;
+    document.getElementById("n").innerHTML = mc;
 
     var reply_click = function()
     {
@@ -161,16 +169,19 @@
           mc = 0;
           sc = 0;
           jc = 0;
+          nc = 0;
           localStorage.setItem("dc", 0);
           localStorage.setItem("ac", 0);
           localStorage.setItem("sc", 0);
           localStorage.setItem("jc", 0);
           localStorage.setItem("mc", 0);
+          localStorage.setItem("nc", 0);
           document.getElementById("d").innerHTML = 0;
           document.getElementById("a").innerHTML = 0;
           document.getElementById("m").innerHTML = 0;
           document.getElementById("s").innerHTML = 0;
           document.getElementById("j").innerHTML = 0;
+          document.getElementById("n").innerHTML = 0;
         }
 
         if (this.id == "dt") {
@@ -193,6 +204,10 @@
           document.getElementById("j").innerHTML = ++jc;
           localStorage.setItem("jc", jc);
         }
+        if (this.id == "nt") {
+          document.getElementById("n").innerHTML = ++jc;
+          localStorage.setItem("nc", jc);
+        }
 
     }
     document.getElementById('dt').onclick = reply_click;
@@ -200,6 +215,7 @@
     document.getElementById('mt').onclick = reply_click;
     document.getElementById('jt').onclick = reply_click;
     document.getElementById('st').onclick = reply_click;
+    document.getElementById('nt').onclick = reply_click;
     document.getElementById('reset').onclick = reply_click;
   });
 
