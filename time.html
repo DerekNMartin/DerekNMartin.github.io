@@ -58,9 +58,6 @@
     .container{
       display: block;
       float: none;
-      margin-top: 10%;
-      margin-left: auto;
-      margin-right: auto
     }
 
     footer {
@@ -95,7 +92,7 @@
       font-size: 150px;
       font-family: 'Lobster', cursive;
       display: block;
-      margin-bottom: -25px;
+      margin-top: 25px;
     }
     #date {
       color: white;
@@ -180,23 +177,33 @@
 <script>
 
   $(document).ready(function() {
-      var req = new XMLHttpRequest();
-      req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto,CA&APPID=a38778c120820e63562015def1c092a1", true);
-      req.onreadystatechange = function() {
-        if (this.status == 200 && this.readyState == 4){
-        //convert to JSON
-        var data = JSON.parse(this.responseText);
-        console.log(data);
+	  
+		$.get("https://ipinfo.io", function(response) {
+			var city = "Toronto";
+	  		var country = "CA";
+		  	city = response.city;
+		  	country = response.country;
+			
+			var apiKey = "2b7362fd26c4104cbc781f53e40a6169"
+	  		var link = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&APPID=" + apiKey;
+			
+			var req = new XMLHttpRequest();
+			  req.open("GET", link, true);
+			  req.onreadystatechange = function() {
+				if (this.status == 200 && this.readyState == 4){
+				//convert to JSON
+				var data = JSON.parse(this.responseText);
+				console.log(data);
 
-        $("#name").html(data.name);
-        $("#weather").html(data.weather[0].description);
-        var t = data.main.temp - 273.15;
-        $("#temp").html(t.toFixed(0)+"&degC");
-        }
-      }
-
-      req.send();
-
+				$("#name").html(data.name);
+				$("#weather").html(data.weather[0].description);
+				var t = data.main.temp - 273.15;
+				$("#temp").html(t.toFixed(0)+"&degC");
+				}
+			  }
+			  req.send();
+		}, "jsonp")
+	
     });
 
 function startTime() {
