@@ -115,11 +115,23 @@ and Applications</dd>
     <div class="row">
       <h2 class="subTitle" id="experience"><strong>Experience</strong></h2>
       <div class="ten columns">
+       <dl>
+          <h3 class="position">Web & Communications Coordinator – YorkU Career Centre</h3>
+          <dt>May 2017 - present </dt>
+          <dt>York University, Toronto</dt>
+          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator, InDesign]</dt>
+          <dd>• Responsible for the creative design, development, implementation and ongoing maintenance of the Career Centre website and web-based projects.</dd>
+          <dd>• Responsible for the design, administration and production of Career Centre marketing materials (in keeping with York University graphic standards)</dd>
+          <dd>• Project management skills, including setting goals and time management.</dd>
+        </dl>
+        
+        <hr>
+        
         <dl>
           <h3 class="position">York University Career Centre - Web & Marketing Assistant</h3>
-          <dt>May 2016 - present </dt>
+          <dt>May 2016 – April 2017</dt>
           <dt>York University, Toronto</dt>
-          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dd>
+          <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dt>
           <dd>• Responsible for making website updates using WordPress, HTML and CSS.</dd>
           <dd>• Assisting with creation of marketing materials to promote Career Centre events (in keeping with York University graphic standards)</dd>
           <dd>• Project management skills, including setting goals and time management</dd>
@@ -132,7 +144,7 @@ and Applications</dd>
           <dt>October 2015 - March 2016 </dt>
           <dt>York University, Toronto</dt>
           <dt>[Wordpress, HTML/CSS, Javascript]</dt>
-          <dd>Responsible for designing and developing the gallery page to showcase Digital Media students' projects.</dd>
+          <dd>Responsible for designing and developing a gallery page for Digital Media students to post and showcase their course projects.</dd>
         </dl>
         <hr>
         <dl>
@@ -140,12 +152,11 @@ and Applications</dd>
           <dt>2014-present</dt>
           <dt>Toronto</dt>
           <dt>[Photoshop, Illustrator]</dt>
-          <dd>• Desiged logos and graphics for YorkU's Winter's Frosh Week to be printed on an assortment of promotional material as well as online.</dd>
-          <dd>• Designed online branding for YorkU's 25th annual Theatre Department's "PlayGround Festival"</dd>
-          <dd>• Designed graphics and logo for a YorkU pub.</dd>
+          <dd>• Design of logo and promotional material for YorkU Winter's Frosh Week (print and web). </dd>
+          <dd>• Designed online/print branding for YorkU's 25th annual Theatre Department's "PlayGround Festival"</dd>
+          <dd>• Designed graphics and logo for YorkU's Absinthe pub.</dd>
           <dd>• Designed promotional brochures for a Toronto based realtor.</dd>
-          <dd>• Designing promotional material for DMSA events.</dd>
-          <dd>• Designed logos for various student clubs at YorkU.</dd>
+          <dd>• Designed logos for various student clubs/associations at YorkU.</dd>
         </dl>
         <hr>
         <dl>
@@ -153,26 +164,26 @@ and Applications</dd>
           <dt>Summer 2014</dt>
           <dt>York University, Toronto</dt>
           <dt>[Wordpress, HTML/CSS, Javascript, Photoshop, Illustrator]</dt>
-          <dd>Designing and developing a website for the digital media student association. The website is intended to provide useful information for Digital Media students including tutoring sesions, event dates, and general program information.</dd>
+          <dd>• Designing and developing a website for the Digital Media Student Association. The website is intended to provide useful information for Digital Media students including tutoring sessions, event dates, and general program information.</dd>
         </dl>
         <hr>
         <dl>
           <h3 class="position">Customer Service Representative</h3>
           <dt>May 2011 - September 2015</dt>
           <dt>Longo's Grocery Company, Burlington</dt>
-          <dd>Providing exceptional service to customers through clear communication skills, patience, attentiveness, and understanding the customer’s needs. Handling money. Reacting to a fast paced environment.</dd>
+          <dd>• Providing exceptional service to customers through clear communication skills, patience, attentiveness, and understanding the customer’s needs. Handling money. Reacting to a fast paced environment.</dd>
         </dl>
       </div>
     </div>
 
     <div class="row">
-      <h2 class="subTitle" id="extra"><strong>Extracuricular</strong></h2>
+      <h2 class="subTitle" id="extra"><strong>Extracurricular</strong></h2>
       <div class="ten columns">
         <dl>
           <h3 class="position">Co-President - Digital Media Student Association</h3>
-          <dt>2015 - present</dt>
+          <dt>2015 - 2017</dt>
           <dd>Manage a team of DM students to coordinate and organize digital media related events, as well as provide useful information and tutoring for DM students.</dd>
-          <dd>• Ensure representation of DM students on affiliated	Faculty	Councils,	as per the request of relevant student government	bodies.</dd>
+          <dd>• Ensure representation of DM students on affiliated	Faculty	Councils, as per the request of relevant student government bodies.</dd>
           <dd>• Responsible	for	the	design of promotional materials for web and print.</dd>
         </dl>
         <hr>
@@ -180,7 +191,7 @@ and Applications</dd>
           <h3 class="position">Director of Public Relations - Digital Media Student Association</h3>
           <dt>2014 - 2015</dt>
           <dd>• Responsible	for	the	design	and	distribution of promotional materials via web and print.</dd>
-          <dd>• Ensure the DMSA website is kept up to	date.</dd>
+          <dd>• Ensure the DMSA website is kept up to date.</dd>
         </dl>
       </div>
     </div>
@@ -191,8 +202,15 @@ and Applications</dd>
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script type="text/javascript">
-
+	  
     $(document).ready(function() {
+		
+		  var links = document.getElementsByTagName("a");
+			for(var i = 0, len = links.length; i < len; i++) {
+				console.log(links.length);
+				links[i].className = "random-color";
+			}
+		
     /* Random Link Color-------------------- */
     var randomLinks = $('a.random-color');
     var original = randomLinks.css('color');
