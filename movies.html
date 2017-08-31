@@ -17,7 +17,8 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- CSS
@@ -31,7 +32,7 @@
 
   <!-- Libraries
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
   <script src="./script/jqueryColor.js"></script>
   
     <!-- Google Analytics
@@ -45,6 +46,66 @@
     ga('create', 'UA-80637173-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+
+	<!-- Get Movie Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script>
+		function requestInfo(title, index){
+		  var request = new XMLHttpRequest();
+		  var api_key = "50a254d1f8ba4cc81607bc01839b6e29";
+		  request.open('GET', 'https://api.themoviedb.org/3/search/movie?query='+title+'&api_key='+api_key,false);
+		  request.setRequestHeader('Accept', 'application/json');
+		  request.send();
+		  if (request.status === 200) {
+		    var info = JSON.parse(request.responseText);
+		    return info;
+		  }
+		}
+
+		function requestDir(id){
+		  var request = new XMLHttpRequest();
+		  var api_key = "50a254d1f8ba4cc81607bc01839b6e29";
+		  request.open('GET', 'https://api.themoviedb.org/3/movie/'+id+'/credits?&api_key='+api_key,false);
+		  request.setRequestHeader('Accept', 'application/json');
+		  request.send();
+		  if (request.status === 200) {
+		    var info = JSON.parse(request.responseText);
+		    var dir = [];
+		    info.crew.forEach(function(entry){
+			if (entry.job === 'Director') {
+			    dir.push(entry.name);
+			}
+		    })
+		    return dir.toString();
+		  }
+		}
+
+		function submitMovie() {
+		  var movieTitle = $('#inputTitle').val();
+		  var movieRating =  $('#inputRating').val();
+		  getMovie(movieTitle,movieRating);
+		}
+
+		var movie = {id:"",title:"",year:"",dir:"",img:"",imdb:"",rating:""};
+		var posterPath = 'https://image.tmdb.org/t/p/w300';
+		function getMovie(movieName,rating){
+		      movie.id = requestInfo(movieName).results[0].id;
+		      movie.title = requestInfo(movieName).results[0].title;
+		      movie.year = requestInfo(movieName).results[0].release_date.split('-')[0];
+		      movie.img = posterPath + requestInfo(movieName).results[0].poster_path;
+		      movie.dir = requestDir(movie.id);
+		      movie.imdb = requestInfo(movieName).results[0].vote_average;
+		      movie.rating = rating;
+		      console.log(movie);
+		      $("#movieList").append("<div class='overlay movieCard' id=\""+movie.id+"\"></div>");
+		      $('#'+movie.id).append('<h1 class="myRating">' + movie.rating + '</h1>');
+		      $('#'+movie.id).append('<h2 class="movieTitle">' + movie.title +' (' + movie.year + ')</h2>');
+		      $('#'+movie.id).append('<h3 class="dir">Directed by: '+movie.dir+'</h3>');
+		      $('#'+movie.id).append('<p class="rating"> IMDB: ' +movie.imdb+ '</p>');
+		      $('#'+movie.id).css({'background-image': "url("+movie.img+")", 'background-repeat': 'no-repeat'});
+		}
+	</script>
 
 </head>
 <body>
@@ -81,6 +142,12 @@
         <h1 class="title" > Recently Viewed </h1>
         <h2 class="subTitle" style=" border: none;"> A list of movies I've recently seen.</h2>
   </div>
+	
+	<input id="inputTitle" type="text" name="movieTitle" placeholder="Movie Title">
+	<input id="inputRating" type="text" name="movieTitle" placeholder="Rating">
+	<input type="submit" value="Add to List" onclick="submitMovie();" />
+	<div class="row" id="movieList">
+	</div>
   
   <hr>
       <footer>
