@@ -53,7 +53,7 @@
 	<!-- Get Movie Script
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<script>
-	
+window.onload = function () {
 	Vue.component('movie-item', {
 	  template: '\
 	    <div class=\'overlay movieCard\'>\
@@ -131,7 +131,7 @@
 	  var img = posterPath + requestInfo(title).results[0].poster_path;
 	  return img;
 	}
-
+}
 		
 	</script>
 	
