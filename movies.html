@@ -171,17 +171,19 @@
   </div>
 	
 <div id="movieList">
-  <input
-    v-model="newTitle"
-    placeholder="Movie Title"
-    type="text"
-  >
-  <input
-    v-model="inputRating"
-    placeholder="Movie Rating"
-    type="number"
-  >
-  <button v-on:click="addNewMovie">Add Movie</button>
+	<div class="center" style="text-align: center">  
+	<input
+	    v-model="newTitle"
+	    placeholder="Movie Title"
+	    type="text"
+	  >
+	  <input
+	    v-model="inputRating"
+	    placeholder="Movie Rating"
+	    type="number"
+	  >
+	  <button v-on:click="addNewMovie">Add Movie</button>
+	</div>
   
   <div class="row">
     <transition-group name="slide-fade">
