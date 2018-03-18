@@ -4,7 +4,12 @@
       {{ cardText | tradeMark }}
     </div>
     <div class="card__footer">
-      Cards Against Vue
+      <div class="card__footer-title">
+        Cards Against Vue
+      </div>
+      <div class="card__footer-index">
+        {{ cardIndex }}
+      </div>
     </div>
   </div>
 </template>
@@ -12,7 +17,7 @@
 <script>
 module.exports = {
   name: 'WhiteCard',
-  props: ['cardText'],
+  props: ['cardText', 'cardIndex'],
   filters: {
     tradeMark: (value) => {
       const string = value.replace(/&trade;|&reg;/g, '')
@@ -24,8 +29,8 @@ module.exports = {
 
 <style scoped lang='scss'>
   .card {
+    display: inline-table;
     border-radius: 5px;
-    display: inline-block;
     border: 3px solid;
     color: #000000;
     text-align: left;
@@ -39,10 +44,19 @@ module.exports = {
       font-weight: 600;
     }
     &__footer {
+      width: 85%;
       font-weight: 600;
       padding-bottom: 1em;
       position: absolute;
       bottom: 10px;
+      &-title {
+        display: inline-block;
+      }
+      &-index {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+      }
     }
   }
 </style>

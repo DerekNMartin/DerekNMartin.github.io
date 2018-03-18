@@ -32,11 +32,11 @@ module.exports = {
 
 <style scoped lang='scss'>
   .card {
+    display: inline-table;
     border: 3px solid;
     border-radius: 5px;
     color: #FFFFFF;
     text-align: left;
-    margin: 0 auto;
     width: 250px;
     height: 350px;
     padding: 1em;

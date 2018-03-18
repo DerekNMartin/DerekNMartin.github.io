@@ -6,22 +6,20 @@
       <button class="btn-black" @click="chooseBlackCard">Deal Black Card</button>
       <button class="button-primary" @click="clearGame">Clear Game</button>
     </div>
+    <div class="row">
+      <button @click="previousCardInHand">Previous Card</button>
+      <button @click="nextCardInHand">Next Card</button>
+    </div>
     <template v-if="currentBlackCard">
-      <div class="row">
-        <BlackCard
-          :cardText="currentBlackCard.text">
-        </BlackCard>
-      </div>
+      <BlackCard
+        :cardText="currentBlackCard.text">
+      </BlackCard>
     </template>
-    <template v-if="playerHand">
-      <div class="row">
-        <template v-for="card in playerHand">
-          <WhiteCard
-            :key="card"
-            :cardText="card">
-          </WhiteCard>
-        </template>
-      </div>
+    <template v-if="playerHand[0]">
+      <WhiteCard
+        :cardText="currentWhiteCard"
+        :cardIndex="currentCardIndex+1">
+      </WhiteCard>
     </template>
   </div>
 </template>
@@ -40,9 +38,30 @@ export default {
       whiteCards: deck.whiteCards,
       playerHand: [],
       currentBlackCard: '',
+      currentCardIndex: 0,
+      currentWhiteCard: '',
     }
   },
   methods: {
+    setCurrentCard() {
+      this.currentWhiteCard = this.playerHand[this.currentCardIndex]
+    },
+    nextCardInHand() {
+      if (this.currentCardIndex >= this.playerHand.length - 1) {
+        this.currentCardIndex = 0
+      } else {
+        this.currentCardIndex += 1
+      }
+      this.setCurrentCard()
+    },
+    previousCardInHand() {
+      if (this.currentCardIndex <= 0) {
+        this.currentCardIndex = this.playerHand.length - 1
+      } else {
+        this.currentCardIndex -= 1
+      }
+      this.setCurrentCard()
+    },
     clearGame() {
       this.playerHand = []
       this.currentBlackCard = ''
@@ -60,6 +79,7 @@ export default {
       for (let i = 0; i < numberOfCards; i += 1) {
         this.playerHand.push(this.randomCard(this.whiteCards))
       }
+      this.setCurrentCard()
     },
     chooseBlackCard() {
       this.currentBlackCard = this.randomCard(this.blackCards)
