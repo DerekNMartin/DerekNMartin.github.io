@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__text">
-      {{ cardText | blankSpace | breakString }}
+      {{ cardText | blankSpace | breakString | specialCharacters }}
     </div>
     <div class="card__footer">
       Cards Against Vue
@@ -22,9 +22,12 @@ module.exports = {
       const breakString = value.replace(/<br>/g, '\n')
       return breakString
     },
-    tradeMark: (value) => {
-      const string = value.replace(/&trade;/g, '™')
-      return string
+    specialCharacters: (value) => {
+      let formated = value
+      formated = formated.replace(/&trade;/g, '™')
+      formated = formated.replace(/&reg;/g, '®')
+      formated = formated.replace(/&Uuml;/g, 'Ü')
+      return formated
     },
   },
 }
