@@ -6121,6 +6121,10 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+swipe-js-iso@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.0.4.tgz#3371608112b30182e898f61d5bc02f7e38099c3d"
+
 table@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.2.tgz#a33447375391e766ad34d3486e6e2aedc84d2e36"
@@ -6495,6 +6499,12 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vswipe@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vswipe/-/vswipe-1.0.1.tgz#9157ae8d7afac265f44625910934738b62485712"
+  dependencies:
+    swipe-js-iso "^2.0.3"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

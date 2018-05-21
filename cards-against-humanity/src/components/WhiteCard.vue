@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
+  <div @click="selectCard(card)" class="card">
     <div class="card__text">
-      {{ cardText | tradeMark }}
+      {{ cardText | specialCharacters }}
     </div>
     <div class="card__footer">
       <div class="card__footer-title">
@@ -19,9 +19,27 @@ module.exports = {
   name: 'WhiteCard',
   props: ['cardText', 'cardIndex'],
   filters: {
-    tradeMark: (value) => {
-      const string = value.replace(/&trade;|&reg;/g, '')
-      return string
+    specialCharacters: (value) => {
+      let formated = value
+      formated = formated.replace(/&trade;/g, '™')
+      formated = formated.replace(/&reg;/g, '®')
+      formated = formated.replace(/&Uuml;/g, 'Ü')
+      return formated
+    },
+  },
+  /* eslint-disable object-shorthand, func-names */
+  computed: {
+    card: function () {
+      return {
+        text: this.cardText,
+        index: this.cardIndex,
+      }
+    },
+  },
+  /* eslint-enable object-shorthand, func-names */
+  methods: {
+    selectCard(card) {
+      this.$emit('select-card', card)
     },
   },
 }
@@ -29,7 +47,7 @@ module.exports = {
 
 <style scoped lang='scss'>
   .card {
-    display: inline-table;
+    flex: 0 0 auto;
     border-radius: 5px;
     border: 3px solid;
     color: #000000;
