@@ -1,162 +1,133 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" />
-<title>DerekMartin.</title>
-<meta name="Derek's personal space on the interwebs." content="">
-<meta name="Derek Martin" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>DerekMartin.</title>
+    <meta name="Derek's personal space on the interwebs." content="">
+    <meta name="Derek Martin" content="">
 
-<link href='https://fonts.googleapis.com/css?family=Inconsolata|Merriweather:400,900' rel='stylesheet' type='text/css'>
-<script src="https://use.fontawesome.com/a45be71cc3.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata|Merriweather:400,900' rel='stylesheet' type='text/css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<link rel="stylesheet" href="css/home.css">
+    <!-- Import VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="./script/jqueryColor.js"></script>
-	
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-80637173-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<script type="application/javascript">
-  (function(b, o, n, g, s, r, c) { if (b[s]) return; b[s] = {}; b[s].scriptToken = "XzIwMzUyODM3MTA"; r = o.createElement(n); c = o.getElementsByTagName(n)[0]; r.async = 1; r.src = g; r.id = s + n; c.parentNode.insertBefore(r, c); })(window, document, "script", "//cdn.oribi.io/XzIwMzUyODM3MTA/oribi.js", "ORIBI");
-</script>
-  
-</head>
-
-<body>
-<div class="Container">
-  <div class="Content">
-    <div class="Wrapper">
-      <div class="LeftContent">
-        <div class="center-align">
-          <svg id="center"
-               version="1.1" 
-               xmlns="http://www.w3.org/2000/svg" 
-               xmlns:xlink="http://www.w3.org/1999/xlink" 
-               x="0px" 
-               y="0px"
-               width="40%" 
-               viewBox="0 0 285.333 346.667" 
-               enable-background="new 0 0 285.333 346.667"
-               xml:space="preserve">
-          <polyline 
-            fill="none" 
-            stroke="#FFFFFF" 
-            stroke-width="40" 
-            stroke-miterlimit="10" 
-            points="264,294 264,49 142.274,171.561 21.072,49 21.667,294.12 106.538,204.555 ">
-            <animate attributeName="stroke"
-                   attributeType="XML"
-                   from="#ecf0f1"
-                   to="#2ecc71"
-                   dur="20s"
-                   values="#ecf0f1; #2ecc71; #e74c3c; #9b59b6; #f1c40f; #3498db; #ecf0f1"
-                   keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 1"
-                   repeatCount="indefinite"/>
-          </polyline>
-        </svg>
-        <h1 class="name">Derek Martin</h1>
-        <p>The hybrid; part designer, part developer.</p>
-        <br>
-        <p>Front-End Developer at <a href="http://bioconnect.com">BioConnect</a></p>
-        <p>Honours Digital Media graduate.</p>
-        <p>Based in Toronto.</p>
-        <br>
-        <footer>
-          <p><a id=resume href="resume.html">Résumé</a></p>
-          <a target="_blank" href="https://www.instagram.com/derekmart.in/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://twitter.com/_DerekMartin"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://github.com/DerekNMartin"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://codepen.io/derekmartian/"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-          <div id="below">
-            <p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-          </div>
-          </footer>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inconsolata', Courier, monospace;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+      }
+      .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: white;
+        text-align: center;
+        transition: color 1.5s ease;
+        transition: background-color 2.5s ease;
+      }
+      .grid-item-logo {
+        grid-column: 1 / 1;
+      }
+      .grid-item-info {
+        grid-column: 5 / 5;
+        grid-row: 5 / 5;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        padding: 1em;
+      }
+      .logo {
+        width: 5vw;
+      }
+      .social-icon {
+        margin: 1em auto;
+        width: 20%;
+      }
+      p.email {
+        grid-row: 2 / 2;
+        grid-column: 1 / span 2;
+        text-align: center;
+        font-size: 1vw;
+      }
+      .center-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      svg {
+        transition: fill 1.5s ease;
+        transition: transform 0.5s ease;
+      }
+      a svg:hover {
+        transform: scale(1.3)
+      }
+    </style>
+  </head>
+  <body>
+    <div id="derek">
+      <div class="grid-container ">
+        <div class="grid-item-logo center-center">
+          <img class="logo" src="./images/DMlogo.svg">
         </div>
-      </div>
-      <div class="RightContent">
-        <div class="center-align">
-          <h2 class="title">Projects</h2>
-            <ul>
-              <li class="project">
-                <h3 class="project">
-                  <a target="_blank" class="random-color" href="movies.html">Movie List</a>
-                </h3>
-                <p class="date">Summer 2017 [Vue.js web app]</p>
-              </li>
-              <li class="project">
-                <h3 class="project">
-                  <a class="random-color" href="time.html">Time</a>
-                </h3>
-              <p class="date">July 2015 - [web app]</p>
-            </li>
-            <li class="project">
-              <h3 class="project">
-                <a target="_blank" class="random-color" href="https://codepen.io/derekmartian/pen/YqaJzY">Primordial Soup</a>
-              </h3>
-            <p class="date">2016 - present [class project]</p>
-          </li>
-          <li class="project">
-            <h3 class="project">
-              <a target="_blank" class="random-color" href="http://dmstudents.ca/">Digital Media Student Association</a>
-            </h3>
-            <p class="date">2014 - present [website]</p>
-          </li>
-          <li class="project">
-            <h3 class="project">
-              <a class="random-color" href="design">Graphic Design</a>
-            </h3>
-            <p class="date">2014 - present [Freelance]</p>
-          </li>
-          <li class="project">
-            <h3 class="project">
-              <a target="_blank" class="random-color" href="http://dmgallery.apps01.yorku.ca/">AMPD's Digital Media Gallery</a>
-            </h3>
-            <p class="date">January 2016 - May 2016 [website]</p>
-          </li>
-          <li class="project">
-            <h3 class="project">
-              <a target="_blank" class="random-color" href="https://medium.com/@_DerekMartin/redesigning-presto-24e7960c8ecd#.dsq7l9ded">Redesigning Presto</a>
-            </h3>
-            <p class="date">Summer 2016 [case study]</p>
-          </li>
-          <li class="project">
-            <h3 class="project">
-              <a class="random-color" href="couchCosmos">Couch Cosmos</a>
-            </h3>
-            <p class="date">October 2014 - [installation]</p></li>
-          </ul>
+        <template v-for="message in messages">
+          <template v-if="message">
+            <div :style="{ color: randomColour }" @mouseover="randomize" class="grid-item">{{ message }}</div>
+          </template>
+          <template v-else>
+            <div :style="{ backgroundColor: randomColour }" class="grid-item"></div>
+          </template>
+        </template>
+        <div class="grid-item-info">
+          <a class="social-icon" href="#" target="_blank">
+            <svg :style="{ fill: randomColour }"
+            aria-hidden="true" data-prefix="fab" data-icon="github-alt" class="svg-inline--fa fa-github-alt fa-w-15" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+          </a>
+          <a class="social-icon" href="#" target="_blank">
+            <svg :style="{ fill: randomColour }"
+            aria-hidden="true" data-prefix="fab" data-icon="codepen" class="svg-inline--fa fa-codepen fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path></svg>
+          </a>
+          <p class="email">derek.n.martin@gmail.com</p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script>		
-	$(document).ready(function() {
-		/* Random Link Color-------------------- */
-		var randomLinks = $('a.random-color');
-		var original = randomLinks.css('color');
-		var colors = ["#16a085","#27ae60","#2980b9","#8e44ad","#f39c12","#d35400","#c0392b",]
-    randomLinks.hover(function() { //mouseover
-      var num = (Math.floor(Math.random() * colors.length))
-      var col = colors[num];
-      $(this).animate({
-      'color': col,
-      },100);
-    },function() { //mouseout
-      $(this).animate({
-      'color': original,
-      },500);
-    });
-    });
-	</script>
-
-</body>
+  </body>
+  <script>
+    new Vue({
+      el: '#derek',
+      data: {
+        messages: [
+          'hey', 'i\'m derek', 'i live in toronto', 'i work at BioConnect',
+          'i\'m a front-end developer', '', '', '',
+          '', '', '', '', '',
+          '', '', '', '', '',
+          '', '', '', '', ''
+        ],
+        randomColour: 'hsl(360, 100%, 100%)'
+      },
+      methods: {
+        randomizeGrid() {
+          this.messages.sort(() => { return 0.5 - Math.random() })
+        },
+        randomRange(min, max) {
+          return Math.floor(Math.random() * (min - max *1)) + min
+        },
+        randomizeColour() {
+          this.randomColour = `hsl(${this.randomRange(0, 360)}, ${this.randomRange(80, 90)}%, ${this.randomRange(50, 60)}%)`
+        },
+        randomize() {
+          this.randomizeGrid()
+          this.randomizeColour()
+        }
+      }
+    })
+  </script>
 </html>
