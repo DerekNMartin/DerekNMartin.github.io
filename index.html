@@ -1,3 +1,8 @@
+<!-- 
+  TO DO:
+    - MOBILE
+ -->
+
 <!doctype html>
 <html>
   <head>
@@ -45,6 +50,10 @@
         grid-template-columns: 50% 50%;
         padding: 1em;
       }
+      .grid-item-greeting {
+        grid-row: 3 / 3;
+        grid-column: 3 / 3;
+      }
       .logo {
         width: 5vw;
       }
@@ -75,14 +84,21 @@
     <div id="derek">
       <div class="grid-container ">
         <div class="grid-item-logo center-center">
-          <img class="logo" src="./images/DMlogo.svg">
+          <img @mouseover="toggleGreeting" class="logo" src="./images/DMlogo.svg">
         </div>
-        <template v-for="message in messages">
-          <template v-if="message">
-            <div :style="{ color: randomColour }" @mouseover="randomize" class="grid-item">{{ message }}</div>
-          </template>
-          <template v-else>
-            <div :style="{ backgroundColor: randomColour }" class="grid-item"></div>
+        <template v-if="greeting">
+          <div @mouseover="toggleGreeting" class="grid-item-greeting center-center">
+            Hey
+          </div>
+        </template>
+        <template v-else>
+          <template v-for="message in messages">
+            <template v-if="message">
+              <div :style="{ color: randomColour }" @mouseover="randomize" class="grid-item">{{ message }}</div>
+            </template>
+            <template v-else>
+              <div :style="{ backgroundColor: randomColour }" class="grid-item"></div>
+            </template>
           </template>
         </template>
         <div class="grid-item-info">
@@ -110,7 +126,8 @@
           '', '', '', '', '',
           '', '', '', '', ''
         ],
-        randomColour: 'hsl(360, 100%, 100%)'
+        randomColour: 'hsl(360, 100%, 100%)',
+        greeting: true,
       },
       methods: {
         randomizeGrid() {
@@ -125,6 +142,10 @@
         randomize() {
           this.randomizeGrid()
           this.randomizeColour()
+        },
+        toggleGreeting() {
+          this.greeting = !this.greeting
+          this.randomize()
         }
       }
     })
