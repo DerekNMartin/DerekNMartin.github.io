@@ -14,8 +14,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata|Merriweather:400,900' rel='stylesheet' type='text/css'>
 
-    <!-- Import VueJS -->
+    <!-- Import VueJS Production-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    <!-- Import VueJS Development-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80637173-1"></script>
@@ -159,16 +163,26 @@
   <script>
     new Vue({
       el: '#derek',
+      computed: {
+        messages: function() {
+          // (5x5 grid) = 25 cells - 2 fixed cells = 23 available cells
+          const _messageArray = Array.apply(null, Array(23))
+            .map((item, index) => {
+              return this.aboutMe[index] ? this.aboutMe[index] : null
+          })
+          return _messageArray
+        },
+      },
       data: {
-        messages: [
-          'hey', 'i\'m derek', 'i live in toronto', 'i work at BioConnect',
-          'i\'m a front-end developer', '', '', '',
-          '', '', '', '', '',
-          '', '', '', '', '',
-          '', '', '', '', ''
-        ],
         randomColour: 'hsl(360, 100%, 100%)',
         greeting: true,
+        aboutMe: [
+          'hey',
+          'i live in toronto',
+          'i work at BioConnect',
+          'i\'m derek',
+          'i\'m a front end developer'
+        ]
       },
       methods: {
         randomizeGrid() {
