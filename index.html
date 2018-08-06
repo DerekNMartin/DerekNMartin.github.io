@@ -29,15 +29,18 @@
         grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
       }
       .grid-item {
+        opacity: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 600;
         text-transform: capitalize;
-        color: white;
         text-align: center;
         transition: color 1.5s ease;
-        transition: background-color 2.5s ease;
+        transition: background-color 2.5s ease, opacity 2s ease-in;
+      }
+      .grid-item--message {
+        color: black;
       }
       .grid-item-logo {
         grid-column: 1 / 1;
@@ -73,6 +76,9 @@
         justify-content: center;
         align-items: center;
       }
+      .on-greeting {
+        opacity: 1;
+      }
       svg {
         transition: fill 1.5s ease, transform 0.5s ease;
       }
@@ -100,13 +106,18 @@
             Hey
           </div>
         </template>
-        <template v-else>
+        <template v-show="greeting">
           <template v-for="message in messages">
             <template v-if="message">
-              <div :style="{ color: randomColour }" @mouseover="randomize" class="grid-item">{{ message }}</div>
+              <div :style="{ color: randomColour }" 
+                @mouseover="randomize" 
+                class="grid-item grid-item--message"
+                :class="greeting ? '' : 'on-greeting'">{{ message }}</div>
             </template>
             <template v-else>
-              <div :style="{ backgroundColor: randomColour }" class="grid-item"></div>
+              <div :style="{ backgroundColor: randomColour }"
+                class="grid-item"
+                :class="greeting ? '' : 'on-greeting'"></div>
             </template>
           </template>
         </template>
