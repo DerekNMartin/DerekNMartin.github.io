@@ -49,6 +49,7 @@
         grid-template-rows: 50% 50%;
         grid-template-columns: 50% 50%;
         padding: 1em;
+        overflow-wrap: break-word;
       }
       .grid-item-greeting {
         grid-row: 3 / 3;
@@ -77,6 +78,14 @@
       }
       a svg:hover {
         transform: scale(1.3)
+      }
+      @media only screen and (max-width: 600px) {
+        p.email, .grid-item {
+          font-size: 0.6em;
+        }
+        .social-icon {
+          width: 50%;
+        }
       }
     </style>
   </head>
