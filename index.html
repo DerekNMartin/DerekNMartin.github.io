@@ -145,7 +145,7 @@
           <template v-for="message in messages">
             <template v-if="message">
               <div :style="{ color: randomColour }" 
-                @mouseover="randomize" 
+                @mouseover="greeting ? null : randomize()" 
                 class="grid-item"
                 :class="greeting ? '' : 'on-greeting'">{{ message }}</div>
             </template>
@@ -183,7 +183,7 @@
       computed: {
         messages: function() {
           // (5x5 grid) = 25 cells - 2 fixed cells = 23 available cells
-          const _availableCells = this.greeting ? 22 : 23
+          const _availableCells = 23
           const _messageArray = Array.apply(null, Array(_availableCells))
             .map((item, index) => {
               return this.aboutMe[index] ? this.aboutMe[index] : null
