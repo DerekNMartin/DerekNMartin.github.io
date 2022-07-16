@@ -60,10 +60,11 @@
         grid-column: 5 / 5;
         grid-row: 5 / 5;
         display: grid;
-        grid-template-rows: 60% 40%;
-        grid-template-columns: 33% 33% 33%;
-        padding: 1em;
-        overflow-wrap: break-word;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+        justify-items: center;
+        align-items: center;
       }
       .grid-item-greeting {
         grid-row: 3 / 3;
@@ -73,7 +74,6 @@
         width: 5vw;
       }
       .social-icon {
-        margin: 4vh auto 0 auto;
         width: 30%;
       }
       .email {
@@ -81,6 +81,7 @@
         grid-column: 1 / span 3;
         text-align: center;
         font-size: 1.1vw;
+        word-break: break-all;
       }
       .center-center {
         display: flex;
@@ -91,7 +92,7 @@
         opacity: 1;
       }
       .underline::after {
-        margin-top: -0.6em;
+        margin-top: -0.6rem;
         content: '';
         display: block;
         width: 0%;
@@ -112,7 +113,7 @@
       }
       @media only screen and (max-width: 600px) {
         .email, .grid-item {
-          font-size: 0.6em;
+          font-size: 0.6rem;
         }
         .social-icon {
           grid-column: 2 / 2;
@@ -121,8 +122,9 @@
           width: 100%;
         }
         .grid-item-info {
-          grid-template-rows: 20% 20% 20% 40%;
-          grid-template-columns: 33% 33% 33%;
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
+          padding: 0.5rem;
         }
         .email {
           grid-row: 4 / 4;
