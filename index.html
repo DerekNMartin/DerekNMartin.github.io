@@ -1,3 +1,21 @@
+<!-- 
+
+ ___      ___  ____     ___  __  _      ___ ___   ____  ____  ______  ____  ____  
+|   \    /  _]|    \   /  _]|  |/ ]    |   |   | /    ||    \|      ||    ||    \ 
+|    \  /  [_ |  D  ) /  [_ |  ' /     | _   _ ||  o  ||  D  )      | |  | |  _  |
+|  D  ||    _]|    / |    _]|    \     |  \_/  ||     ||    /|_|  |_| |  | |  |  |
+|     ||   [_ |    \ |   [_ |     \    |   |   ||  _  ||    \  |  |   |  | |  |  |
+|     ||     ||  .  \|     ||  .  |    |   |   ||  |  ||  .  \ |  |   |  | |  |  |
+|_____||_____||__|\_||_____||__|\_|    |___|___||__|__||__|\_| |__|  |____||__|__|
+                                                                                  
+
+Oh, fancy meeting you here. You snoopin'?
+
+You're not going to find much here.
+
+Keep It Simple, Stupid.
+
+ -->
 <!doctype html>
 <html>
   <head>
@@ -128,10 +146,14 @@
       </p>
       <template v-show="greeting">
         <template v-for="message in messages">
-          <div v-if="message" :style="{ color: randomColour }" 
+          <div
+            v-if="message"
+            :style="{ color: randomColour }" 
             @mouseover="greeting ? null : randomize()" 
             class="grid-item"
-            :class="greeting ? '' : 'on-greeting'">{{ message }}</div>
+            :class="greeting ? '' : 'on-greeting'">
+            {{ message }}
+          </div>
             <div v-else :style="{ backgroundColor: randomColour }"
               class="grid-item"
               :class="greeting ? '' : 'on-greeting'"/>
