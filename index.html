@@ -28,7 +28,7 @@ Keep It Simple, Stupid.
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,900&display=swap' rel='stylesheet' type='text/css'>
 
     <!-- Import VueJS Production-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
     <!-- Import VueJS Development-->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
@@ -139,7 +139,7 @@ Keep It Simple, Stupid.
   <body>
     <main id="derek" class="grid-container">
       <section class="grid-item-logo center-center">
-        <img @mouseover="toggleGreeting" class="logo" src="./images/DMlogo.svg">
+        <img @mouseover="toggleGreeting" class="logo" src="./images/DMlogo.svg" alt="DM logo">
       </section>
       <p v-if="greeting" @mouseover="toggleGreeting" class="grid-item-greeting center-center">
         Hey 👋🏽
